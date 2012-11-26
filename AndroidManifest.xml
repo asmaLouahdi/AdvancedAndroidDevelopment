@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.siteduzero.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actionbar.ActionBarActivity"
+            android:label="@string/title_activity_actionbar" />
+        <activity
+            android:name=".actionbar.ActionBarContextualActivity"
+            android:label="@string/title_activity_actionbar_contextual" />
+        <activity
+            android:name=".fragments.fixe.FixeActivity"
+            android:label="@string/title_fragment_fixe" />
+        <activity
+            android:name=".fragments.dynamic.DynamicActivity"
+            android:label="@string/title_fragment_dynamic" />
+        <activity
+            android:name=".dialog.DialogActivity"
+            android:label="@string/title_activity_dialog" />
+        <activity
+            android:name=".lists.ListViewActivity"
+            android:label="@string/title_activity_listview" />
+        <activity
+            android:name=".nfc.NFCActivity"
+            android:label="@string/title_activity_nfc" />
+        <activity
+            android:name=".notifications.NotificationsActivity"
+            android:label="@string/title_activity_notifications" />
+        <activity
+            android:name=".settings.UsingSettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+    </application>
+
+</manifest>

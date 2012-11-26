@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Titles activities -->
+    <string name="app_name">SdZAndroid</string>
+    <string name="title_activity_main">Samples</string>
+    <string name="title_activity_actionbar">Actionbar</string>
+    <string name="title_activity_actionbar_contextual">Actionbar contextual</string>
+    <string name="title_activity_dialog">Dialog</string>
+    <string name="title_activity_listview">List</string>
+    <string name="title_activity_nfc">NFC technology</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_settings">Settings Preferences</string>
+
+    <!-- Titles fragments -->
+    <string name="title_fragment_fixe">Fixe fragment</string>
+    <string name="title_fragment_dynamic">Dynamic fragment</string>
+    <string name="title_fragment_simple_listview">Simple List</string>
+    <string name="title_fragment_custom_listview">Custom List</string>
+    <string name="title_fragment_dynamic_listview">Dynamic List</string>
+    <string name="title_fragment_dialog">DialogFragment</string>
+    <string name="title_fragment_dialog_alert">AlertDialog</string>
+
+    <!-- MainActivity -->
+    <string name="empty_list">No samples</string>
+
+    <string-array name="list_samples">
+        <item>Actionbar</item>
+        <item>Actionbar contextual</item>
+        <item>Fixe fragment</item>
+        <item>Dynamic fragment</item>
+        <item>Dialog</item>
+        <item>Simple List</item>
+        <item>Custom List</item>
+        <item>Dynamic List</item>
+        <item>Nfc</item>
+        <item>Notifications</item>
+        <item>Settings Preferences</item>
+    </string-array>
+
+    <!-- Fragments -->
+    <string name="btn_fragment_1">Go to fragment 2</string>
+    <string name="btn_fragment_2">Go to fragment 1</string>
+
+    <!-- Actionbar -->
+    <string name="btn_contextual">Contextual menu</string>
+    <string name="toast_add">Add something</string>
+    <string name="toast_save">Save something</string>
+    <string name="toast_crop">Crop something</string>
+    <string name="toast_trash">Trash something</string>
+
+    <!-- Dialog -->
+    <string name="text_dialog">Text of the DialogFragment</string>
+    <string name="btn_dialog">Button of Dialog</string>
+    <string name="alert_dialog_ok">Good</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+
+    <!-- ListView -->
+    <string name="text_empty">No item in your ListView</string>
+    <string name="image_avatar_description">Avatar of the user</string>
+
+    <string-array name="list_examples">
+        <item>Belgique</item>
+        <item>France</item>
+        <item>Italie</item>
+        <item>Espagne</item>
+        <item>Portugal</item>
+        <item>Suisse</item>
+    </string-array>
+
+    <!-- Nfc -->
+    <string name="text_nfc">Text for NFC</string>
+
+    <!-- Notifications -->
+    <string name="notification_action_1">Do an action</string>
+    <string name="notification_action_2">Another action</string>
+    <string name="btn_basic">Basic</string>
+    <string name="btn_big_text">Big text</string>
+    <string name="btn_big_pic">Big picture</string>
+    <string name="btn_btn_inbox">Complexe</string>
+    <string name="basic_title">Basic Notification</string>
+    <string name="basic_text">This notification is basic.</string>
+    <string name="big_text_title">Big text Notification</string>
+    <string name="big_text">This is a bit text. I like chocolate and candy because there are a lot of sugar.</string>
+    <string name="big_pic_title">Big picture Notification</string>
+    <string name="inbox_title">Inbox Notification</string>
+
+    <!-- Preferences -->
+    <string name="title_header_1">Header preference 1</string>
+    <string name="summary_header_1">Summary header 1</string>
+    <string name="title_category_1">Category 1</string>
+    <string name="title_category_2">Category 2</string>
+    <string name="title_pref_1">Preference 1</string>
+    <string name="summary_pref_1">Summary preference 1</string>
+    <string name="title_pref_2">Preference 2</string>
+    <string name="summary_pref_2">Summary preference 2</string>
+    <string name="title_pref_3">Preference 3</string>
+    <string name="summary_pref_3">Summary preference 3</string>
+    <string name="switch_off_pref_3">OFF</string>
+    <string name="switch_on_pref_3">ON</string>
+    <string name="title_pref_4">Preference 4</string>
+    <string name="summary_pref_4">Summary preference 4</string>
+    <string name="title_pref_5">Preference 5</string>
+    <string name="summary_pref_5">Summary preference 5</string>
+    <string name="title_pref_6">Preference 6</string>
+    <string name="summary_pref_6">Summary preference 6</string>
+
+    <string-array name="list_pref_5">
+        <item>List Preference 1</item>
+        <item>List Preference 2</item>
+        <item>List Preference 3</item>
+    </string-array>
+
+    <!-- Menus -->
+    <string name="menu_add">Add</string>
+    <string name="menu_crop">Crop</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_trash">Trash</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- Other -->
+    <string name="default_lorem">Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis contra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam aliquantum de spatio curriculoque consuetudo maiorum.</string>
+
+</resources>
