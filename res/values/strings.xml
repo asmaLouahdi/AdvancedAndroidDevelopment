@@ -1,9 +1,9 @@
 <resources>
 
-    <string name="app_name">SdZAndroid</string>
+    <string name="app_name">Go further in Android development</string>
 
     <!-- Titles -->
-    <string name="title_activity_main">Samples</string>
+    <string name="title_samples">Samples</string>
     <string name="title_fragment_fixe">Fixe fragment</string>
     <string name="title_fragment_dynamic">Dynamic fragment</string>
     <string name="title_listfragment_simple">Simple list</string>
@@ -27,7 +27,9 @@
     <string name="chapter_8">Chapter 8</string>
 
     <!-- MainActivity -->
-    <string name="empty_list">Empty list</string>
+    <string name="btn_samples">Samples</string>
+    <string name="btn_sdz">Go to tutorial on the \"Site du Zéro\"</string>
+    <string name="btn_source">Get source codes</string>
 
     <!-- Fragments -->
     <string name="btn_fragment_1">Go to fragment 2</string>
@@ -115,6 +117,7 @@
     <string name="menu_settings">Settings</string>
 
     <!-- Other -->
+    <string name="empty_list">Empty list</string>
     <string name="default_lorem">Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis contra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam aliquantum de spatio curriculoque consuetudo maiorum.</string>
 
 </resources>
