@@ -1,59 +1,37 @@
 <resources>
 
-    <!-- Titles activities -->
     <string name="app_name">SdZAndroid</string>
-    <string name="title_activity_main">Samples</string>
-    <string name="title_activity_actionbar">Actionbar</string>
-    <string name="title_activity_actionbar_contextual">Actionbar contextual</string>
-    <string name="title_activity_dialog">Dialog</string>
-    <string name="title_activity_listview">List</string>
-    <string name="title_activity_nfc">NFC technology</string>
-    <string name="title_activity_notifications">Notifications</string>
-    <string name="title_activity_settings">Settings Preferences</string>
 
-    <!-- Titles fragments -->
+    <!-- Titles -->
+    <string name="title_activity_main">Samples</string>
     <string name="title_fragment_fixe">Fixe fragment</string>
     <string name="title_fragment_dynamic">Dynamic fragment</string>
-    <string name="title_fragment_simple_listview">Simple List</string>
-    <string name="title_fragment_custom_listview">Custom List</string>
-    <string name="title_fragment_dynamic_listview">Dynamic List</string>
-    <string name="title_fragment_dialog">DialogFragment</string>
-    <string name="title_fragment_dialog_alert">AlertDialog</string>
+    <string name="title_listfragment_simple">Simple list</string>
+    <string name="title_listfragment_custom">Custom list</string>
+    <string name="title_listfragment_dynamic">Dynamic list</string>
+    <string name="title_fragment_settings">PreferenceFragment</string>
+    <string name="title_fragment_dialog">Dialog</string>
+    <string name="title_actionbar_simple">Actionbar</string>
+    <string name="title_actionbar_contextual">Actionbar contextual</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_techno_nfc">NFC</string>
+
+    <!-- Chapters -->
+    <string name="chapter_1">Chapter 1</string>
+    <string name="chapter_2">Chapter 2</string>
+    <string name="chapter_3">Chapter 3</string>
+    <string name="chapter_4">Chapter 4</string>
+    <string name="chapter_5">Chapter 5</string>
+    <string name="chapter_6">Chapter 6</string>
+    <string name="chapter_7">Chapter 7</string>
+    <string name="chapter_8">Chapter 8</string>
 
     <!-- MainActivity -->
-    <string name="empty_list">No samples</string>
-
-    <string-array name="list_samples">
-        <item>Actionbar</item>
-        <item>Actionbar contextual</item>
-        <item>Fixe fragment</item>
-        <item>Dynamic fragment</item>
-        <item>Dialog</item>
-        <item>Simple List</item>
-        <item>Custom List</item>
-        <item>Dynamic List</item>
-        <item>Nfc</item>
-        <item>Notifications</item>
-        <item>Settings Preferences</item>
-    </string-array>
+    <string name="empty_list">Empty list</string>
 
     <!-- Fragments -->
     <string name="btn_fragment_1">Go to fragment 2</string>
     <string name="btn_fragment_2">Go to fragment 1</string>
-
-    <!-- Actionbar -->
-    <string name="btn_contextual">Contextual menu</string>
-    <string name="toast_home">Return home</string>
-    <string name="toast_add">Add something</string>
-    <string name="toast_save">Save something</string>
-    <string name="toast_crop">Crop something</string>
-    <string name="toast_trash">Trash something</string>
-
-    <!-- Dialog -->
-    <string name="text_dialog">Text of the DialogFragment</string>
-    <string name="btn_dialog">Button of Dialog</string>
-    <string name="alert_dialog_ok">Good</string>
-    <string name="alert_dialog_cancel">Cancel</string>
 
     <!-- ListView -->
     <string name="text_empty">No item in your ListView</string>
@@ -68,22 +46,13 @@
         <item>Suisse</item>
     </string-array>
 
-    <!-- Nfc -->
-    <string name="text_nfc">Text for NFC</string>
-
-    <!-- Notifications -->
-    <string name="notification_action_1">Do an action</string>
-    <string name="notification_action_2">Another action</string>
-    <string name="btn_basic">Basic</string>
-    <string name="btn_big_text">Big text</string>
-    <string name="btn_big_pic">Big picture</string>
-    <string name="btn_btn_inbox">Complexe</string>
-    <string name="basic_title">Basic Notification</string>
-    <string name="basic_text">This notification is basic.</string>
-    <string name="big_text_title">Big text Notification</string>
-    <string name="big_text">This is a bit text. I like chocolate and candy because there are a lot of sugar.</string>
-    <string name="big_pic_title">Big picture Notification</string>
-    <string name="inbox_title">Inbox Notification</string>
+    <!-- Dialog -->
+    <string name="btn_launch_dialog">DialogFragment</string>
+    <string name="btn_launch_alert">AlertDialog</string>
+    <string name="text_dialog">Text of the DialogFragment</string>
+    <string name="btn_dialog">Button of Dialog</string>
+    <string name="alert_dialog_ok">Good</string>
+    <string name="alert_dialog_cancel">Cancel</string>
 
     <!-- Preferences -->
     <string name="title_header_1">Header preference 1</string>
@@ -110,6 +79,31 @@
         <item>List Preference 2</item>
         <item>List Preference 3</item>
     </string-array>
+
+    <!-- Actionbar -->
+    <string name="btn_contextual">Contextual menu</string>
+    <string name="toast_home">Return home</string>
+    <string name="toast_add">Add something</string>
+    <string name="toast_save">Save something</string>
+    <string name="toast_crop">Crop something</string>
+    <string name="toast_trash">Trash something</string>
+
+    <!-- Notifications -->
+    <string name="notification_action_1">Do an action</string>
+    <string name="notification_action_2">Another action</string>
+    <string name="btn_basic">Basic</string>
+    <string name="btn_big_text">Big text</string>
+    <string name="btn_big_pic">Big picture</string>
+    <string name="btn_btn_inbox">Complexe</string>
+    <string name="basic_title">Basic Notification</string>
+    <string name="basic_text">This notification is basic.</string>
+    <string name="big_text_title">Big text Notification</string>
+    <string name="big_text">This is a bit text. I like chocolate and candy because there are a lot of sugar.</string>
+    <string name="big_pic_title">Big picture Notification</string>
+    <string name="inbox_title">Inbox Notification</string>
+
+    <!-- Nfc -->
+    <string name="text_nfc">Text for NFC</string>
 
     <!-- Menus -->
     <string name="menu_add">Add</string>

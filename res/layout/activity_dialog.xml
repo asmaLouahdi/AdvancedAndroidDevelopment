@@ -9,13 +9,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:onClick="showDialogFragment"
-        android:text="@string/title_fragment_dialog" />
+        android:text="@string/btn_launch_dialog" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:onClick="showAlertDialog"
-        android:text="@string/title_fragment_dialog_alert" />
+        android:text="@string/btn_launch_alert" />
 
 </LinearLayout>

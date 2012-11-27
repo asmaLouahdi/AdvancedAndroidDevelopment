@@ -1,4 +1,4 @@
-package com.siteduzero.android.lists;
+package com.siteduzero.android.lists.dynamic;
 
 import android.content.Context;
 import android.util.AttributeSet;

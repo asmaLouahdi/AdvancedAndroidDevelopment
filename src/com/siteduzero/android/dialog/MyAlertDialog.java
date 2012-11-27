@@ -1,4 +1,4 @@
-package com.siteduzero.android.dialog.alert;
+package com.siteduzero.android.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
 import com.siteduzero.android.R;
-import com.siteduzero.android.dialog.DialogActivity;
 
 public class MyAlertDialog extends DialogFragment {
 	public static MyAlertDialog newInstance(int title) {

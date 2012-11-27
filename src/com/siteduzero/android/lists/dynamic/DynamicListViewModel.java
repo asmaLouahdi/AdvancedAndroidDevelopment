@@ -1,4 +1,4 @@
-package com.siteduzero.android.lists;
+package com.siteduzero.android.lists.dynamic;
 
 public class DynamicListViewModel {
 	private int mImageRessource;

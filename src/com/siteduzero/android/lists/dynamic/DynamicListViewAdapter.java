@@ -1,4 +1,4 @@
-package com.siteduzero.android.lists;
+package com.siteduzero.android.lists.dynamic;
 
 import java.util.ArrayList;
 import java.util.List;

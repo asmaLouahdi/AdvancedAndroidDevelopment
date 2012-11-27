@@ -31,6 +31,8 @@ public class DynamicActivity extends FragmentActivity {
 			} else if (mFragment.equals("Dynamic2Fragment")) {
 				showFragment(this.mDynamic2Fragment);
 			}
+		} else {
+			showFragment(this.mDynamic1Fragment);
 		}
 	}
 

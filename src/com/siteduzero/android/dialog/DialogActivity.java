@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
 import com.siteduzero.android.R;
-import com.siteduzero.android.dialog.alert.MyAlertDialog;
 
 public class DialogActivity extends FragmentActivity {
 	public static final int TYPE_DIALOG_FRAGMENT = 1;
@@ -32,11 +31,11 @@ public class DialogActivity extends FragmentActivity {
 		switch (type) {
 		case TYPE_DIALOG_FRAGMENT:
 			newFragment = MyDialogFragment
-					.newInstance(R.string.title_fragment_dialog);
+					.newInstance(R.string.btn_launch_dialog);
 			break;
 		case TYPE_ALERT_DIALOG:
 			newFragment = MyAlertDialog
-					.newInstance(R.string.title_fragment_dialog_alert);
+					.newInstance(R.string.btn_launch_alert);
 			break;
 		}
 		newFragment.show(ft, "dialog");

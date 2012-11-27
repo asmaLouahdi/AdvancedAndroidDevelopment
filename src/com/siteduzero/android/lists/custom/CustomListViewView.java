@@ -1,4 +1,4 @@
-package com.siteduzero.android.lists;
+package com.siteduzero.android.lists.custom;
 
 import com.siteduzero.android.R;
 

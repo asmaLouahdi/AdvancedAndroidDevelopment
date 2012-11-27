@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.siteduzero.android.R;
 
-public class ActionBarActivity extends Activity {
+public class ActionBarSimpleActivity extends Activity {
 	private ShareActionProvider mShareActionProvider = null;
 
 	@Override

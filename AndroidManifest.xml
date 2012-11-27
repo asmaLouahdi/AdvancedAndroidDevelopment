@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".samples.SamplesListActivity"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,37 +23,50 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".actionbar.ActionBarActivity"
-            android:label="@string/title_activity_actionbar"
-            android:uiOptions="splitActionBarWhenNarrow" />
-        <activity
-            android:name=".actionbar.ActionBarContextualActivity"
-            android:label="@string/title_activity_actionbar_contextual" />
+        <!-- Chapter 1 -->
         <activity
             android:name=".fragments.fixe.FixeActivity"
             android:label="@string/title_fragment_fixe" />
         <activity
             android:name=".fragments.dynamic.DynamicActivity"
             android:label="@string/title_fragment_dynamic" />
+        <!-- Chapter 2 -->
         <activity
-            android:name=".dialog.DialogActivity"
-            android:label="@string/title_activity_dialog" />
+            android:name=".lists.simple.SimpleListActivity"
+            android:label="@string/title_listfragment_simple" />
         <activity
-            android:name=".lists.ListViewActivity"
-            android:label="@string/title_activity_listview" />
+            android:name=".lists.custom.CustomListActivity"
+            android:label="@string/title_listfragment_custom" />
         <activity
-            android:name=".nfc.NFCActivity"
-            android:label="@string/title_activity_nfc" />
-        <activity
-            android:name=".notifications.NotificationsActivity"
-            android:label="@string/title_activity_notifications" />
+            android:name=".lists.dynamic.DynamicListActivity"
+            android:label="@string/title_listfragment_dynamic" />
+        <!-- Chapter 3 -->
         <activity
             android:name=".settings.UsingSettingsActivity"
-            android:label="@string/title_activity_settings" />
+            android:label="@string/title_fragment_settings" />
         <activity
             android:name=".settings.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+            android:label="@string/title_fragment_settings" />
+        <!-- Chapter 4 -->
+        <activity
+            android:name=".dialog.DialogActivity"
+            android:label="@string/title_fragment_dialog" />
+        <!-- Chapter 5 -->
+        <activity
+            android:name=".actionbar.ActionBarSimpleActivity"
+            android:label="@string/title_actionbar_simple"
+            android:uiOptions="splitActionBarWhenNarrow" />
+        <activity
+            android:name=".actionbar.ActionBarContextualActivity"
+            android:label="@string/title_actionbar_contextual" />
+        <!-- Chapter 7 -->
+        <activity
+            android:name=".notifications.NotificationsActivity"
+            android:label="@string/title_notifications" />
+        <!-- Chapter 8 -->
+        <activity
+            android:name=".nfc.NFCActivity"
+            android:label="@string/title_techno_nfc" />
     </application>
 
 </manifest>
