@@ -25,7 +25,8 @@
         </activity>
         <activity
             android:name=".actionbar.ActionBarActivity"
-            android:label="@string/title_activity_actionbar" />
+            android:label="@string/title_activity_actionbar"
+            android:uiOptions="splitActionBarWhenNarrow" />
         <activity
             android:name=".actionbar.ActionBarContextualActivity"
             android:label="@string/title_activity_actionbar_contextual" />

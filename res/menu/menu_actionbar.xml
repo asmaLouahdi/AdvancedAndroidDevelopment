@@ -12,6 +12,11 @@
         android:showAsAction="ifRoom|withText"
         android:title="@string/menu_save"/>
     <item
+        android:id="@+id/menu_share"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_share"/>
+    <item
         android:id="@+id/menu_crop"
         android:icon="@android:drawable/ic_menu_crop"
         android:showAsAction="never"
