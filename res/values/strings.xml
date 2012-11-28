@@ -87,6 +87,7 @@
     <string name="toast_home">Return home</string>
     <string name="toast_add">Add something</string>
     <string name="toast_save">Save something</string>
+    <string name="toast_search_submit">Submit search</string>
     <string name="toast_crop">Crop something</string>
     <string name="toast_trash">Trash something</string>
 
@@ -113,6 +114,7 @@
     <string name="menu_refresh">Refresh</string>
     <string name="menu_trash">Trash</string>
     <string name="menu_save">Save</string>
+    <string name="menu_search">Search</string>
     <string name="menu_share">Share</string>
     <string name="menu_settings">Settings</string>
 

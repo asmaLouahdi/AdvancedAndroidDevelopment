@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.SearchView;
+import android.widget.SearchView.OnQueryTextListener;
 import android.widget.ShareActionProvider;
 import android.widget.Toast;
 
@@ -14,6 +16,7 @@ import com.siteduzero.android.R;
 
 public class ActionBarSimpleActivity extends Activity {
 	private ShareActionProvider mShareActionProvider = null;
+	private SearchView mSearchView = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +31,42 @@ public class ActionBarSimpleActivity extends Activity {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_actionbar, menu);
 
-	    MenuItem item = menu.findItem(R.id.menu_share);
-	    mShareActionProvider = (ShareActionProvider) item.getActionProvider();
+		// ShareActionProvider
+		MenuItem itemProvider = menu.findItem(R.id.menu_share);
+		mShareActionProvider = (ShareActionProvider) itemProvider
+				.getActionProvider();
 
-	    Intent intent = new Intent(Intent.ACTION_SEND);
-	    intent.setType("text/plain");
-	    intent.putExtra(Intent.EXTRA_TEXT, "Message");
-	    setShareIntent(intent);
-	    
-	    return true;
+		Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_TEXT, "Message");
+		setShareIntent(intent);
+
+		// SearchView
+		MenuItem itemSearch = menu.findItem(R.id.menu_search);
+		mSearchView = (SearchView) itemSearch.getActionView();
+		mSearchView.setOnQueryTextListener(new OnQueryTextListener() {
+
+			@Override
+			public boolean onQueryTextSubmit(String query) {
+				Toast.makeText(getApplicationContext(),
+						R.string.toast_search_submit, Toast.LENGTH_SHORT)
+						.show();
+				return true;
+			}
+
+			@Override
+			public boolean onQueryTextChange(String newText) {
+				return false;
+			}
+		});
+
+		return true;
 	}
-	
+
 	private void setShareIntent(Intent shareIntent) {
-	    if (mShareActionProvider != null) {
-	        mShareActionProvider.setShareIntent(shareIntent);
-	    }
+		if (mShareActionProvider != null) {
+			mShareActionProvider.setShareIntent(shareIntent);
+		}
 	}
 
 	@Override
