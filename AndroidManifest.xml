@@ -64,6 +64,9 @@
         <activity
             android:name=".actionbar.ActionBarContextualActivity"
             android:label="@string/title_actionbar_contextual" />
+        <activity
+            android:name=".viewpager.ViewPagerActivity"
+            android:label="@string/title_viewpager" />
         <!-- Chapter 7 -->
         <activity
             android:name=".notifications.NotificationsActivity"

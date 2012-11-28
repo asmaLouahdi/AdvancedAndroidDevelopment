@@ -13,6 +13,7 @@
     <string name="title_fragment_dialog">Dialog</string>
     <string name="title_actionbar_simple">Actionbar</string>
     <string name="title_actionbar_contextual">Actionbar contextual</string>
+    <string name="title_viewpager">ViewPager</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_techno_nfc">NFC</string>
 
@@ -91,6 +92,11 @@
     <string name="toast_search_submit">Submit search</string>
     <string name="toast_crop">Crop something</string>
     <string name="toast_trash">Trash something</string>
+    
+    <!-- ViewPager -->
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
     <!-- Notifications -->
     <string name="notification_action_1">Do an action</string>

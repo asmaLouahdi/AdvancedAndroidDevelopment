@@ -15,6 +15,7 @@ import com.siteduzero.android.lists.simple.SimpleListActivity;
 import com.siteduzero.android.nfc.NFCActivity;
 import com.siteduzero.android.notifications.NotificationsActivity;
 import com.siteduzero.android.settings.UsingSettingsActivity;
+import com.siteduzero.android.viewpager.ViewPagerActivity;
 
 public class SamplesController {
 	private static final SamplesController INSTANCE = new SamplesController();
@@ -39,6 +40,8 @@ public class SamplesController {
 				R.string.chapter_5, ActionBarSimpleActivity.class));
 		mItems.add(new SamplesItem(R.string.title_actionbar_contextual,
 				R.string.chapter_5, ActionBarContextualActivity.class));
+		mItems.add(new SamplesItem(R.string.title_viewpager,
+				R.string.chapter_6, ViewPagerActivity.class));
 		mItems.add(new SamplesItem(R.string.title_notifications,
 				R.string.chapter_7, NotificationsActivity.class));
 		mItems.add(new SamplesItem(R.string.title_techno_nfc,
