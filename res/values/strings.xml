@@ -27,6 +27,7 @@
     <string name="chapter_8">Chapter 8</string>
 
     <!-- MainActivity -->
+    <string name="img_asdroid"></string>
     <string name="btn_samples">Samples</string>
     <string name="btn_sdz">Go to tutorial on the \"Site du Zéro\"</string>
     <string name="btn_source">Get source codes</string>
