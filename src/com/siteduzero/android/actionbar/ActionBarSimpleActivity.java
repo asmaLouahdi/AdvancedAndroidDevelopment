@@ -21,7 +21,7 @@ public class ActionBarSimpleActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+	
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 	}
@@ -30,22 +30,22 @@ public class ActionBarSimpleActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_actionbar, menu);
-
+	
 		// ShareActionProvider
 		MenuItem itemProvider = menu.findItem(R.id.menu_share);
 		mShareActionProvider = (ShareActionProvider) itemProvider
 				.getActionProvider();
-
+	
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("text/plain");
 		intent.putExtra(Intent.EXTRA_TEXT, "Message");
 		setShareIntent(intent);
-
+	
 		// SearchView
 		MenuItem itemSearch = menu.findItem(R.id.menu_search);
 		mSearchView = (SearchView) itemSearch.getActionView();
 		mSearchView.setOnQueryTextListener(new OnQueryTextListener() {
-
+	
 			@Override
 			public boolean onQueryTextSubmit(String query) {
 				Toast.makeText(getApplicationContext(),
@@ -53,13 +53,13 @@ public class ActionBarSimpleActivity extends Activity {
 						.show();
 				return true;
 			}
-
+	
 			@Override
 			public boolean onQueryTextChange(String newText) {
 				return false;
 			}
 		});
-
+	
 		return true;
 	}
 
