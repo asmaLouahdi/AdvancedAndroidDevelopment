@@ -2,12 +2,16 @@ package com.siteduzero.android.notifications;
 
 import android.app.Activity;
 import android.app.Notification;
-import android.app.Notification.Builder;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat.BigPictureStyle;
+import android.support.v4.app.NotificationCompat.BigTextStyle;
+import android.support.v4.app.NotificationCompat.Builder;
+import android.support.v4.app.NotificationCompat.InboxStyle;
 import android.view.View;
 
 import com.siteduzero.android.R;
@@ -23,61 +27,64 @@ public class NotificationsActivity extends Activity {
 	}
 
 	public void onClickBasic(View v) {
-		Builder builder = new Notification.Builder(this);
+		Builder builder = new NotificationCompat.Builder(this);
 		Notification notification = builder
 				.setContentTitle(getResources().getText(R.string.basic_title))
 				.setContentText(getResources().getText(R.string.basic_text))
-				.setSmallIcon(android.R.drawable.ic_menu_myplaces)
+				.setSmallIcon(R.drawable.ic_launcher)
 				.setWhen(System.currentTimeMillis()).build();
 		notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		mNotificationManager.notify(0, notification);
 	}
 
 	public void onClickBigText(View v) {
-		Builder builder = new Notification.Builder(this);
+		Builder builder = new NotificationCompat.Builder(this);
 		builder.setContentTitle(getResources().getText(R.string.big_text_title))
-				.setSmallIcon(android.R.drawable.ic_menu_myplaces)
+				.setSmallIcon(R.drawable.ic_launcher)
+				.addAction(android.R.drawable.ic_menu_camera,
+						getResources().getText(R.string.notification_action_2),
+						getPendingIntent())
 				.addAction(android.R.drawable.ic_menu_send,
 						getResources().getText(R.string.notification_action_1),
 						getPendingIntent()).setWhen(System.currentTimeMillis());
-		Notification notification = new Notification.BigTextStyle(builder)
-				.bigText(getResources().getText(R.string.big_text)).build();
+		BigTextStyle bigText = new NotificationCompat.BigTextStyle(builder);
+		bigText.bigText(getResources().getText(R.string.big_text));
+		Notification notification = bigText.build();
 		notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		mNotificationManager.notify(0, notification);
 	}
 
 	public void onClickBigPicture(View v) {
-		Builder builder = new Notification.Builder(this);
+		Builder builder = new NotificationCompat.Builder(this);
 		builder.setContentTitle(getResources().getText(R.string.big_pic_title))
-				.setSmallIcon(android.R.drawable.ic_menu_myplaces)
+				.setSmallIcon(R.drawable.ic_launcher)
 				.addAction(android.R.drawable.ic_menu_camera,
 						getResources().getText(R.string.notification_action_2),
 						getPendingIntent())
 				.addAction(android.R.drawable.ic_menu_send,
 						getResources().getText(R.string.notification_action_1),
 						getPendingIntent()).setWhen(System.currentTimeMillis());
-		Notification notification = new Notification.BigPictureStyle(builder)
-				.bigPicture(
-						BitmapFactory.decodeResource(getResources(),
-								R.drawable.notif_big_pic)).build();
+		BigPictureStyle bigPic = new NotificationCompat.BigPictureStyle(builder);
+		Notification notification = bigPic.bigPicture(
+				BitmapFactory.decodeResource(getResources(),
+						R.drawable.notif_big_pic)).build();
 		notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		mNotificationManager.notify(0, notification);
 	}
 
 	public void onClickInBox(View v) {
-		Builder builder = new Notification.Builder(this);
+		Builder builder = new NotificationCompat.Builder(this);
 		builder.setContentTitle(getResources().getText(R.string.inbox_title))
-				.setSmallIcon(android.R.drawable.ic_menu_myplaces)
+				.setSmallIcon(R.drawable.ic_launcher)
 				.addAction(android.R.drawable.ic_menu_camera,
 						getResources().getText(R.string.notification_action_2),
 						getPendingIntent())
 				.addAction(android.R.drawable.ic_menu_send,
 						getResources().getText(R.string.notification_action_1),
 						getPendingIntent()).setWhen(System.currentTimeMillis());
-		Notification notification = new Notification.InboxStyle(builder)
-				.addLine("Line 1").addLine("Line 2")
-				.setBigContentTitle(getResources().getText(R.string.big_text))
-				.setSummaryText("You have 5 messages").build();
+		InboxStyle inbox = new NotificationCompat.InboxStyle(builder);
+		Notification notification = inbox.addLine("Line 1").addLine("Line 2")
+				.setSummaryText("You have 2 messages").build();
 		notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		mNotificationManager.notify(0, notification);
 	}

@@ -40,9 +40,7 @@ public class ViewPagerActivity extends FragmentActivity implements
 
 		// For each of the sections in the app, add a tab to the action bar.
 		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-			actionBar.addTab(actionBar.newTab()
-					.setText(mSectionsPagerAdapter.getPageTitle(i))
-					.setTabListener(this));
+			actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
 		}
 	}
 
