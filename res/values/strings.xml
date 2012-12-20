@@ -15,7 +15,9 @@
     <string name="title_actionbar_contextual">Actionbar contextual</string>
     <string name="title_viewpager">ViewPager</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_techno_nfc">NFC</string>
+    <string name="title_nfc_emulator">NFC Emulator</string>
+    <string name="title_nfc_beam">NFC Beam</string>
+    <string name="title_nfc_normal">NFC normal</string>
 
     <!-- Chapters -->
     <string name="chapter_1">Chapter 1</string>
@@ -113,7 +115,9 @@
     <string name="inbox_title">Inbox Notification</string>
 
     <!-- Nfc -->
+    <string name="btn_nfc">Send a tag</string>
     <string name="text_nfc">Text for NFC</string>
+    <string name="text_no_nfc">You didn\'t have NFC!</string>
 
     <!-- Menus -->
     <string name="menu_add">Add</string>

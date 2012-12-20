@@ -13,6 +13,8 @@ import com.siteduzero.android.lists.custom.CustomListActivity;
 import com.siteduzero.android.lists.dynamic.DynamicListActivity;
 import com.siteduzero.android.lists.simple.SimpleListActivity;
 import com.siteduzero.android.nfc.NFCActivity;
+import com.siteduzero.android.nfc.NFCBeamActivity;
+import com.siteduzero.android.nfc.NFCEmulatorActivity;
 import com.siteduzero.android.notifications.NotificationsActivity;
 import com.siteduzero.android.settings.UsingSettingsActivity;
 import com.siteduzero.android.viewpager.ViewPagerActivity;
@@ -44,8 +46,12 @@ public class SamplesController {
 				R.string.chapter_6, ViewPagerActivity.class));
 		mItems.add(new SamplesItem(R.string.title_notifications,
 				R.string.chapter_7, NotificationsActivity.class));
-		mItems.add(new SamplesItem(R.string.title_techno_nfc,
+		mItems.add(new SamplesItem(R.string.title_nfc_emulator,
+				R.string.chapter_8, NFCEmulatorActivity.class));
+		mItems.add(new SamplesItem(R.string.title_nfc_normal,
 				R.string.chapter_8, NFCActivity.class));
+		mItems.add(new SamplesItem(R.string.title_nfc_beam, R.string.chapter_8,
+				NFCBeamActivity.class));
 	}
 
 	public static SamplesController getInstance() {

@@ -1,11 +1,12 @@
 package com.siteduzero.android.nfc;
 
 import android.app.Activity;
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
+import android.nfc.NfcAdapter.CreateNdefMessageCallback;
+import android.nfc.NfcEvent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.TextView;
@@ -13,23 +14,26 @@ import android.widget.Toast;
 
 import com.siteduzero.android.R;
 
-public class NFCActivity extends Activity {
+public class NFCBeamActivity extends Activity implements
+		CreateNdefMessageCallback {
 	private NfcAdapter mNfcAdapter;
-	private TextView mTextView;
+	private TextView mTextViewNfc;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_nfc);
-		this.mTextView = (TextView) findViewById(R.id.textView1);
-		this.mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+		setContentView(R.layout.activity_nfc_beam);
 
-		if (mNfcAdapter == null || !mNfcAdapter.isEnabled()) {
+		mTextViewNfc = (TextView) findViewById(R.id.textViewNfc);
+		mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+		if (mNfcAdapter == null) {
 			Toast.makeText(this, R.string.text_no_nfc, Toast.LENGTH_SHORT)
 					.show();
 			finish();
 			return;
 		}
+
+		mNfcAdapter.setNdefPushMessageCallback(this, this);
 
 		if (getIntent() != null) {
 			resolveIntent(getIntent());
@@ -37,25 +41,7 @@ public class NFCActivity extends Activity {
 	}
 
 	@Override
-	protected void onResume() {
-		super.onResume();
-		Intent intent = new Intent(this, this.getClass())
-				.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
-		IntentFilter[] filters = null;
-		String[][] techListArray = null;
-		mNfcAdapter.enableForegroundDispatch(this, pIntent, filters,
-				techListArray);
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		mNfcAdapter.disableForegroundDispatch(this);
-	}
-
-	@Override
-	protected void onNewIntent(Intent intent) {
+	public void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		resolveIntent(intent);
 	}
@@ -73,8 +59,18 @@ public class NFCActivity extends Activity {
 				}
 				String str = new String(
 						messages[0].getRecords()[0].getPayload());
-				mTextView.setText(str);
+				mTextViewNfc.setText(str);
 			}
 		}
+	}
+
+	@Override
+	public NdefMessage createNdefMessage(NfcEvent event) {
+		String text = "Message share by Beam !";
+		NdefMessage msg = new NdefMessage(
+				new NdefRecord[] { NFCUtils.createMimeRecord(
+						"application/com.siteduzero.android.nfc",
+						text.getBytes()) });
+		return msg;
 	}
 }
