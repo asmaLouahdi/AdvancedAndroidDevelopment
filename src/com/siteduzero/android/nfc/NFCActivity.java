@@ -54,20 +54,13 @@ public class NFCActivity extends Activity {
 		mNfcAdapter.disableForegroundDispatch(this);
 	}
 
-	@Override
-	protected void onNewIntent(Intent intent) {
-		super.onNewIntent(intent);
-		resolveIntent(intent);
-	}
-
 	private void resolveIntent(Intent intent) {
 		String action = intent.getAction();
-		if (action != null && action.equals(NfcAdapter.ACTION_NDEF_DISCOVERED)) {
+		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
 			Parcelable[] rawMsgs = intent
 					.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
-			NdefMessage[] messages = null;
 			if (rawMsgs != null) {
-				messages = new NdefMessage[rawMsgs.length];
+				NdefMessage[] messages = new NdefMessage[rawMsgs.length];
 				for (int i = 0; i < rawMsgs.length; i++) {
 					messages[i] = (NdefMessage) rawMsgs[i];
 				}

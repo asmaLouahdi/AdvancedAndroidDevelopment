@@ -5,11 +5,11 @@
     android:orientation="horizontal" >
 
     <ImageView
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:contentDescription="@string/img_asdroid"
+        android:padding="5dp"
         android:src="@drawable/astroid_big" />
 
     <ScrollView
@@ -36,6 +36,13 @@
                 android:layout_marginTop="10dp"
                 android:onClick="goToSdZ"
                 android:text="@string/btn_sdz" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="goToSdZBeta"
+                android:text="@string/btn_sdz_beta" />
 
             <Button
                 android:layout_width="match_parent"

@@ -26,7 +26,7 @@ public class NFCBeamActivity extends Activity implements
 
 		mTextViewNfc = (TextView) findViewById(R.id.textViewNfc);
 		mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
-		if (mNfcAdapter == null) {
+		if (mNfcAdapter == null || !mNfcAdapter.isEnabled()) {
 			Toast.makeText(this, R.string.text_no_nfc, Toast.LENGTH_SHORT)
 					.show();
 			finish();
@@ -67,10 +67,9 @@ public class NFCBeamActivity extends Activity implements
 	@Override
 	public NdefMessage createNdefMessage(NfcEvent event) {
 		String text = "Message share by Beam !";
-		NdefMessage msg = new NdefMessage(
-				new NdefRecord[] { NFCUtils.createMimeRecord(
-						"application/com.siteduzero.android.nfc",
-						text.getBytes()) });
+		NdefRecord[] records = new NdefRecord[] { NFCUtils.createMimeRecord(
+				"application/com.siteduzero.android.nfc", text.getBytes()) };
+		NdefMessage msg = new NdefMessage(records);
 		return msg;
 	}
 }

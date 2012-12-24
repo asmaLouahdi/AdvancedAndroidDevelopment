@@ -22,6 +22,13 @@ public class MainActivity extends Activity {
 	public void goToSdZ(View v) {
 		Intent i = new Intent(
 				Intent.ACTION_VIEW,
+				Uri.parse("http://www.siteduzero.com/tutoriel-3-746284-aller-plus-loin-dans-le-developpement-android.html"));
+		startActivity(i);
+	}
+	
+	public void goToSdZBeta(View v) {
+		Intent i = new Intent(
+				Intent.ACTION_VIEW,
 				Uri.parse("http://www.siteduzero.com/tutoriel-3-704884-1-aller-plus-loin-dans-le-developpement-android.html"));
 		startActivity(i);
 	}
