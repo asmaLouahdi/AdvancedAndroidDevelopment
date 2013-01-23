@@ -39,7 +39,7 @@ public class SamplesAdapter extends BaseAdapter {
 			v = new SamplesView(mContext);
 		else
 			v = (SamplesView) convertView;
-		v.bind(item.getTitle(), item.getChapter());
+		v.bind(item.getTitle(), item.getPart(), item.getChapter());
 		return v;
 	}
 	

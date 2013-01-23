@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class SamplesView extends RelativeLayout {
 	private TextView mTextViewTitle;
+	private TextView mTextViewPart;
 	private TextView mTextViewChapter;
 	
 	public SamplesView(Context context, AttributeSet attrs, int defStyle) {
@@ -29,11 +30,13 @@ public class SamplesView extends RelativeLayout {
 	private void init() {
 		inflate(getContext(), R.layout.view_samples, this);
 		mTextViewTitle = (TextView) findViewById(R.id.textViewTitle);
+		mTextViewPart = (TextView) findViewById(R.id.textViewPart);
 		mTextViewChapter = (TextView) findViewById(R.id.textViewChapter);
 	}
 	
-	public void bind(int title, int chapter) {
+	public void bind(int title, int part, int chapter) {
 		mTextViewTitle.setText(title);
+		mTextViewPart.setText(part);
 		mTextViewChapter.setText(chapter);
 	}
 }

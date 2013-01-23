@@ -16,6 +16,8 @@ import com.siteduzero.android.nfc.NFCActivity;
 import com.siteduzero.android.nfc.NFCBeamActivity;
 import com.siteduzero.android.nfc.NFCEmulatorActivity;
 import com.siteduzero.android.notifications.NotificationsActivity;
+import com.siteduzero.android.requests.appengine.AppEngineRequestActivity;
+import com.siteduzero.android.requests.php.PHPRequestActivity;
 import com.siteduzero.android.settings.UsingSettingsActivity;
 import com.siteduzero.android.viewpager.ViewPagerActivity;
 
@@ -25,33 +27,41 @@ public class SamplesController {
 
 	public SamplesController() {
 		mItems.add(new SamplesItem(R.string.title_fragment_fixe,
-				R.string.chapter_1, FixeActivity.class));
+				R.string.part_1, R.string.chapter_1, FixeActivity.class));
 		mItems.add(new SamplesItem(R.string.title_fragment_dynamic,
-				R.string.chapter_1, DynamicActivity.class));
+				R.string.part_1, R.string.chapter_1, DynamicActivity.class));
 		mItems.add(new SamplesItem(R.string.title_listfragment_simple,
-				R.string.chapter_2, SimpleListActivity.class));
+				R.string.part_1, R.string.chapter_2, SimpleListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_listfragment_custom,
-				R.string.chapter_2, CustomListActivity.class));
+				R.string.part_1, R.string.chapter_2, CustomListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_listfragment_dynamic,
-				R.string.chapter_2, DynamicListActivity.class));
+				R.string.part_1, R.string.chapter_2, DynamicListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_fragment_settings,
-				R.string.chapter_3, UsingSettingsActivity.class));
+				R.string.part_1, R.string.chapter_3,
+				UsingSettingsActivity.class));
 		mItems.add(new SamplesItem(R.string.title_fragment_dialog,
-				R.string.chapter_4, DialogActivity.class));
+				R.string.part_1, R.string.chapter_4, DialogActivity.class));
 		mItems.add(new SamplesItem(R.string.title_actionbar_simple,
-				R.string.chapter_5, ActionBarSimpleActivity.class));
+				R.string.part_2, R.string.chapter_1,
+				ActionBarSimpleActivity.class));
 		mItems.add(new SamplesItem(R.string.title_actionbar_contextual,
-				R.string.chapter_5, ActionBarContextualActivity.class));
-		mItems.add(new SamplesItem(R.string.title_viewpager,
-				R.string.chapter_6, ViewPagerActivity.class));
+				R.string.part_2, R.string.chapter_1,
+				ActionBarContextualActivity.class));
+		mItems.add(new SamplesItem(R.string.title_viewpager, R.string.part_2,
+				R.string.chapter_2, ViewPagerActivity.class));
 		mItems.add(new SamplesItem(R.string.title_notifications,
-				R.string.chapter_7, NotificationsActivity.class));
+				R.string.part_2, R.string.chapter_3,
+				NotificationsActivity.class));
 		mItems.add(new SamplesItem(R.string.title_nfc_emulator,
-				R.string.chapter_8, NFCEmulatorActivity.class));
-		mItems.add(new SamplesItem(R.string.title_nfc_normal,
-				R.string.chapter_8, NFCActivity.class));
-		mItems.add(new SamplesItem(R.string.title_nfc_beam, R.string.chapter_8,
-				NFCBeamActivity.class));
+				R.string.part_2, R.string.chapter_4, NFCEmulatorActivity.class));
+		mItems.add(new SamplesItem(R.string.title_nfc_normal, R.string.part_2,
+				R.string.chapter_4, NFCActivity.class));
+		mItems.add(new SamplesItem(R.string.title_nfc_beam, R.string.part_2,
+				R.string.chapter_4, NFCBeamActivity.class));
+		mItems.add(new SamplesItem(R.string.title_local_server, R.string.part_3,
+				R.string.chapter_1, PHPRequestActivity.class));
+		mItems.add(new SamplesItem(R.string.title_app_engine, R.string.part_3,
+				R.string.chapter_2, AppEngineRequestActivity.class));
 	}
 
 	public static SamplesController getInstance() {
