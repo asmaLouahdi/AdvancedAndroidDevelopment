@@ -2,14 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/menu_github"
-        android:icon="@drawable/ic_action_github"
+        android:id="@+id/menu_randoomz"
+        android:icon="@drawable/ic_action_randoomz"
         android:showAsAction="ifRoom"
-        android:title="@string/menu_github"/>
+        android:title="@string/menu_randoomz"/>
     <item
         android:id="@+id/menu_sdz"
         android:icon="@drawable/ic_action_sdz"
         android:showAsAction="ifRoom"
         android:title="@string/menu_sdz"/>
+    <item
+        android:id="@+id/menu_github"
+        android:icon="@drawable/ic_action_github"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_github"/>
 
 </menu>

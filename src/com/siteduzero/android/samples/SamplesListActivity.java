@@ -31,6 +31,9 @@ public class SamplesListActivity extends FragmentActivity {
 		case R.id.menu_sdz:
 			goToSdZ();
 			return true;
+		case R.id.menu_randoomz:
+			goToRandoomz();
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -45,6 +48,13 @@ public class SamplesListActivity extends FragmentActivity {
 	private void goToSourceCodes() {
 		Intent i = new Intent(Intent.ACTION_VIEW,
 				Uri.parse("https://github.com/AndroWiiid/SdZAndroid"));
+		startActivity(i);
+	}
+
+	private void goToRandoomz() {
+		Intent i = new Intent(
+				Intent.ACTION_VIEW,
+				Uri.parse("http://www.randoomz.org/category/programmation/tutoriels-android/"));
 		startActivity(i);
 	}
 }
