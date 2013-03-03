@@ -46,8 +46,9 @@ public class SamplesListActivity extends FragmentActivity {
 	}
 
 	private void goToSourceCodes() {
-		Intent i = new Intent(Intent.ACTION_VIEW,
-				Uri.parse("https://github.com/AndroWiiid/SdZAndroid"));
+		Intent i = new Intent(
+				Intent.ACTION_VIEW,
+				Uri.parse("https://github.com/AndroWiiid/AdvancedAndroidDevelopment"));
 		startActivity(i);
 	}
 

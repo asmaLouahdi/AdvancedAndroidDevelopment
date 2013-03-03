@@ -18,7 +18,7 @@
     <string name="title_nfc_emulator">NFC Emulator</string>
     <string name="title_nfc_normal">NFC Normal</string>
     <string name="title_nfc_beam">NFC Beam</string>
-    <string name="title_local_server">Local server</string>
+    <string name="title_remote_data">Retrieve remote data</string>
     <string name="title_app_engine">Requests on AppEngine</string>
 
     <!-- Parts -->
@@ -132,7 +132,6 @@
     <string name="menu_randoomz">Tutorial on Randoomz</string>
     <string name="menu_add">Add</string>
     <string name="menu_crop">Crop</string>
-    <string name="menu_refresh">Refresh</string>
     <string name="menu_trash">Trash</string>
     <string name="menu_save">Save</string>
     <string name="menu_search">Search</string>

@@ -1,4 +1,4 @@
-package com.siteduzero.android.requests;
+package com.siteduzero.android.requests.php;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +13,7 @@ public class WebService {
 
 	private HttpURLConnection mUrlConnection = null;
 
-	public InputStream connect(String strUrl) {
+	public InputStream connect(final String strUrl) {
 		URLConnection connection = null;
 		URL url = null;
 		try {

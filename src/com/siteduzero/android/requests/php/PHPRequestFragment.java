@@ -14,7 +14,7 @@ import android.widget.ArrayAdapter;
 import com.siteduzero.android.R;
 
 public class PHPRequestFragment extends ListFragment {
-	private List<String> mItems = new ArrayList<String>();
+	private final List<String> mItems = new ArrayList<String>();
 	private ArrayAdapter<String> mAdapter;
 	private WebAsyncTask mWebAsyncTask;
 
@@ -33,7 +33,7 @@ public class PHPRequestFragment extends ListFragment {
 		} else {
 			startWebAsyncTask();
 		}
-		
+
 		mAdapter = new ArrayAdapter<String>(getActivity(),
 				android.R.layout.simple_list_item_1, mItems);
 		getListView().setAdapter(mAdapter);
@@ -47,9 +47,10 @@ public class PHPRequestFragment extends ListFragment {
 		}
 	}
 
-	private static class WebAsyncTask extends AsyncTask<Void, Void, List<String>> {
+	private static class WebAsyncTask extends
+			AsyncTask<Void, Void, List<String>> {
 		PHPRequestFragment mFragment;
-		PHPLocalManager mPHPLocalManager = new PHPLocalManager();
+		ProductManager mPHPLocalManager = new ProductManager();
 
 		public WebAsyncTask(PHPRequestFragment fragment) {
 			this.mFragment = fragment;

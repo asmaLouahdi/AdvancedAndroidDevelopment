@@ -34,6 +34,11 @@ public class UsingSettingsActivity extends Activity {
 		mTextViewPref4 = (TextView) findViewById(R.id.textViewPref4);
 		mTextViewPref5 = (TextView) findViewById(R.id.textViewPref5);
 		mTextViewPref6 = (TextView) findViewById(R.id.textViewPref6);
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
 		refresh();
 	}
 
@@ -49,11 +54,7 @@ public class UsingSettingsActivity extends Activity {
 		case R.id.menu_settings:
 			startActivity(new Intent(this, SettingsActivity.class));
 			return true;
-		case R.id.menu_refresh:
-			refresh();
-			return true;
 		}
-
 		return false;
 	}
 

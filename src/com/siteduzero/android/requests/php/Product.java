@@ -1,4 +1,4 @@
-package com.siteduzero.android.requests.models;
+package com.siteduzero.android.requests.php;
 
 import java.io.Serializable;
 

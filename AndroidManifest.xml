@@ -103,10 +103,7 @@
         <!-- Chapter 9 -->
         <activity
             android:name=".requests.php.PHPRequestActivity"
-            android:label="@string/title_local_server" />
-        <activity
-            android:name=".requests.appengine.AppEngineRequestActivity"
-            android:label="@string/title_app_engine" />
+            android:label="@string/title_remote_data" />
     </application>
 
 </manifest>
