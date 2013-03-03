@@ -22,7 +22,7 @@
 
         <!-- Launcher -->
         <activity
-            android:name=".MainActivity"
+            android:name=".samples.SamplesListActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".samples.SamplesListActivity"
-            android:label="@string/title_samples" />
         <!-- Chapter 1 -->
         <activity
             android:name=".fragments.fixe.FixeActivity"
