@@ -2,4 +2,18 @@
 Source codes of big tutorial on the "Site du Zéro" website about Android development.<br />
 Tutorial during migration on <a href="http://www.randoomz.org">Randoomz</a>.
 # Licence #
-<pre><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Go further in Android development</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="www.randoomz.org" property="cc:attributionName" rel="cc:attributionURL">Gérard Paligot</a><br/>est mis à disposition selon les termes de la<br/><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">licence Creative Commons Attribution -  <br />Partage dans les Mêmes Conditions 3.0 non transposé</a>.</pre>
+<pre>
+	Copyright 2013 Gérard Paligot
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre>
