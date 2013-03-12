@@ -1,4 +1,4 @@
-package com.siteduzero.android.requests.php;
+package com.siteduzero.android.requests;
 
 import java.io.IOException;
 import java.io.InputStream;

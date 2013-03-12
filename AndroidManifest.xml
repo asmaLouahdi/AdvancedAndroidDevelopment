@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature
         android:name="android.hardware.nfc"
@@ -102,7 +103,7 @@
         </activity>
         <!-- Chapter 9 -->
         <activity
-            android:name=".requests.php.PHPRequestActivity"
+            android:name=".requests.PHPRequestActivity"
             android:label="@string/title_remote_data" />
     </application>
 
