@@ -53,6 +53,12 @@ public class NFCActivity extends Activity {
 		super.onPause();
 		mNfcAdapter.disableForegroundDispatch(this);
 	}
+	
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		resolveIntent(intent);
+	}
 
 	private void resolveIntent(Intent intent) {
 		String action = intent.getAction();
