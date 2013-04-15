@@ -1,5 +1,9 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar" />
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionDropDownStyle">@style/Aad.Widget.Holo.Light.Spinner</item>
+    </style>
+
+    <style name="Aad.Widget.Holo.Light.Spinner" parent="@android:style/Widget.Holo.Light.Spinner" />
 
 </resources>
