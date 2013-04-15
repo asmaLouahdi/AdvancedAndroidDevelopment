@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.siteduzero.android.R;
 import com.siteduzero.android.actionbar.ActionBarContextualActivity;
+import com.siteduzero.android.actionbar.ActionBarContextualListActivity;
 import com.siteduzero.android.actionbar.ActionBarSimpleActivity;
 import com.siteduzero.android.dialog.DialogActivity;
 import com.siteduzero.android.fragments.dynamic.DynamicActivity;
@@ -46,6 +47,9 @@ public class SamplesController {
 		mItems.add(new SamplesItem(R.string.title_actionbar_contextual,
 				R.string.part_2, R.string.chapter_1,
 				ActionBarContextualActivity.class));
+		mItems.add(new SamplesItem(R.string.title_actionbar_contextual_list,
+				R.string.part_2, R.string.chapter_1,
+				ActionBarContextualListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_viewpager, R.string.part_2,
 				R.string.chapter_2, ViewPagerActivity.class));
 		mItems.add(new SamplesItem(R.string.title_notifications,

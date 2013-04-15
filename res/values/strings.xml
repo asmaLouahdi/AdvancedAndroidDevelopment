@@ -13,6 +13,7 @@
     <string name="title_fragment_dialog">Dialog</string>
     <string name="title_actionbar_simple">Actionbar</string>
     <string name="title_actionbar_contextual">Actionbar contextual</string>
+    <string name="title_actionbar_contextual_list">Actionbar contextual with list</string>
     <string name="title_viewpager">ViewPager</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_nfc_emulator">NFC Emulator</string>
