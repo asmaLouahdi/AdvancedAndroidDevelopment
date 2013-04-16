@@ -1,6 +1,9 @@
 # Go further in Android development #
 Source codes of big tutorial on the "Site du Zéro" website about Android development.<br />
 Tutorial during migration on <a href="http://www.randoomz.org">Randoomz</a>.
+
+__You must include Google Play Services Library to execute this project__
+
 # Licence #
 <pre>
 Copyright 2013 Gérard Paligot

@@ -20,7 +20,7 @@
     <string name="title_nfc_normal">NFC Normal</string>
     <string name="title_nfc_beam">NFC Beam</string>
     <string name="title_remote_data">Retrieve remote data</string>
-    <string name="title_app_engine">Requests on AppEngine</string>
+    <string name="title_services_authorization">Service Authorization</string>
 
     <!-- Parts -->
     <string name="part_1">Part 1</string>

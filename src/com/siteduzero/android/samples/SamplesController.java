@@ -18,6 +18,7 @@ import com.siteduzero.android.nfc.NFCBeamActivity;
 import com.siteduzero.android.nfc.NFCEmulatorActivity;
 import com.siteduzero.android.notifications.NotificationsActivity;
 import com.siteduzero.android.requests.PHPRequestActivity;
+import com.siteduzero.android.services.auth.ServiceAuthorizationListActivity;
 import com.siteduzero.android.settings.UsingSettingsActivity;
 import com.siteduzero.android.viewpager.ViewPagerActivity;
 
@@ -63,6 +64,9 @@ public class SamplesController {
 				R.string.chapter_4, NFCBeamActivity.class));
 		mItems.add(new SamplesItem(R.string.title_remote_data, R.string.part_3,
 				R.string.chapter_3, PHPRequestActivity.class));
+		mItems.add(new SamplesItem(R.string.title_services_authorization,
+				R.string.part_4, R.string.chapter_2,
+				ServiceAuthorizationListActivity.class));
 	}
 
 	public static SamplesController getInstance() {
