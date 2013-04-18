@@ -110,10 +110,15 @@
             android:name=".requests.PHPRequestActivity"
             android:label="@string/title_remote_data" />
         <!-- Part 4 -->
-        <!-- Chapter 2 -->
         <activity
             android:name=".services.auth.ServiceAuthorizationListActivity"
             android:label="@string/title_services_authorization" />
+        <activity
+            android:name=".services.auth.ServiceAuthorizationActivity"
+            android:label="@string/title_services_authorization" />
+        <activity
+            android:name=".services.plus.SignInActivity"
+            android:label="@string/title_services_sign_in" />
     </application>
 
 </manifest>

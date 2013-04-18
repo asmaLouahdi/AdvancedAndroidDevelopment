@@ -13,25 +13,27 @@ public class WebService {
 
 	private HttpURLConnection mUrlConnection = null;
 
-	public InputStream connect(final String strUrl) {
-		URLConnection connection = null;
-		URL url = null;
+	public InputStream request(final String strUrl) {
 		try {
-			url = new URL(strUrl);
-			connection = url.openConnection();
+			final URL url = new URL(strUrl);
+			final URLConnection connection = url.openConnection();
 			mUrlConnection = (HttpURLConnection) connection;
 			mUrlConnection.connect();
-			if (mUrlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+			final int code = mUrlConnection.getResponseCode();
+			if (code == HttpURLConnection.HTTP_OK) {
 				return mUrlConnection.getInputStream();
+			} else if (code == HttpURLConnection.HTTP_UNAUTHORIZED) {
+				Log.v(TAG, "Unauthorization request on " + strUrl);
 			}
 		} catch (IOException e) {
 			Log.v(TAG, "[IOException] e : " + e.getMessage());
 		}
 		return null;
 	}
-
+	
 	public void disconnect() {
-		if (mUrlConnection != null)
+		if (mUrlConnection != null) {
 			mUrlConnection.disconnect();
+		}
 	}
 }

@@ -8,18 +8,16 @@ import android.util.Log;
 
 public class Utils {
 	public static String convertInputStreamToString(InputStream is) {
-		StringBuilder sb = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					is, "UTF-8"));
+			final BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 			String line = null;
 			while ((line = reader.readLine()) != null) {
 				sb.append(line + "\n");
 			}
 			is.close();
 		} catch (Exception e) {
-			Log.e("org.randoomz.android",
-					"Error converting result " + e.toString());
+			Log.e("com.siteduzero.android.utils", "Error converting result " + e.toString());
 		}
 		return sb.toString();
 	}

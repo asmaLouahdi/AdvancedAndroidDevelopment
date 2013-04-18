@@ -21,6 +21,7 @@
     <string name="title_nfc_beam">NFC Beam</string>
     <string name="title_remote_data">Retrieve remote data</string>
     <string name="title_services_authorization">Service Authorization</string>
+    <string name="title_services_sign_in">Sign In with Google Plus</string>
 
     <!-- Parts -->
     <string name="part_1">Part 1</string>
@@ -141,6 +142,7 @@
 
     <!-- Other -->
     <string name="empty_list">Empty list</string>
+    <string name="waiting">Wainting &#8230;</string>
     <string name="default_lorem">Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis contra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam aliquantum de spatio curriculoque consuetudo maiorum.</string>
 
 </resources>
