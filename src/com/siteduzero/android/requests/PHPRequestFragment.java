@@ -1,19 +1,24 @@
 package com.siteduzero.android.requests;
 
-import java.util.List;
-
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.siteduzero.android.R;
 
-public class PHPRequestFragment extends ListFragment {
+public class PHPRequestFragment extends ListFragment implements
+		LoaderManager.LoaderCallbacks<ListProduct> {
 	private ProductAdapter mAdapter;
-	private WebAsyncTask mWebAsyncTask;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true);
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,52 +29,27 @@ public class PHPRequestFragment extends ListFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		if (mWebAsyncTask != null) {
-			mWebAsyncTask.mFragment = this;
-		} else {
-			startWebAsyncTask();
-		}
-
 		mAdapter = new ProductAdapter(getActivity());
-		getListView().setAdapter(mAdapter);
+		setListAdapter(mAdapter);
+
+		getLoaderManager().initLoader(0, null, this);
 	}
 
 	@Override
-	public void onDetach() {
-		super.onDetach();
-		if (mWebAsyncTask != null) {
-			mWebAsyncTask.mFragment = null;
+	public Loader<ListProduct> onCreateLoader(int id, Bundle args) {
+		return new ProductsAsyncTaskLoader(getActivity());
+	}
+
+	@Override
+	public void onLoadFinished(Loader<ListProduct> loader, ListProduct data) {
+		if (data != null && !data.getProducts().isEmpty()) {
+			mAdapter.bind(data.getProducts());
+			mAdapter.notifyDataSetChanged();
 		}
 	}
 
-	private void startWebAsyncTask() {
-		if (getActivity() != null) {
-			this.mWebAsyncTask = new WebAsyncTask(this);
-			this.mWebAsyncTask.execute();
-		}
-	}
-
-	private static class WebAsyncTask extends
-			AsyncTask<Void, Void, List<Product>> {
-		private PHPRequestFragment mFragment;
-		private final ProductManager mPHPLocalManager = new ProductManager();
-
-		public WebAsyncTask(final PHPRequestFragment fragment) {
-			this.mFragment = fragment;
-		}
-
-		@Override
-		protected List<Product> doInBackground(Void... params) {
-			return mPHPLocalManager.downloadProducts();
-		}
-
-		@Override
-		protected void onPostExecute(List<Product> results) {
-			super.onPostExecute(results);
-			if (mFragment != null && results != null && !results.isEmpty()) {
-				mFragment.mAdapter.bind(results);
-				mFragment.mAdapter.notifyDataSetChanged();
-			}
-		}
+	@Override
+	public void onLoaderReset(Loader<ListProduct> loader) {
+		// Nothing to do here.
 	}
 }

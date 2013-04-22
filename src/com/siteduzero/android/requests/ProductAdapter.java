@@ -47,10 +47,14 @@ public class ProductAdapter extends BaseAdapter {
 		v.bind(item);
 		return v;
 	}
-	
+
 	public void bind(List<Product> items) {
 		mItems.clear();
 		mItems.addAll(items);
+	}
+
+	public List<Product> getItems() {
+		return mItems;
 	}
 
 	private class ProductView extends RelativeLayout {

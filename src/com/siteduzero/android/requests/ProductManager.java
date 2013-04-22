@@ -13,9 +13,9 @@ import com.siteduzero.android.utils.Utils;
 
 public class ProductManager {
 	private static final String TAG = "com.siteduzero.android.requests.php";
-	private static final String URL = "http://192.168.0.33:8888/SdZServeur/index.php";
+	private static final String URL = "http://192.168.0.100:8888/AdvancedAndroidDevelopment/products.php";
 	private final WebService mWebService = new WebService();
-	
+
 	public List<Product> downloadProducts() {
 		final InputStream is = mWebService.request(URL);
 		return parse(is);
