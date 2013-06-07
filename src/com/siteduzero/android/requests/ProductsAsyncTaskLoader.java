@@ -16,6 +16,9 @@ public class ProductsAsyncTaskLoader extends AsyncTaskLoader<ListProduct> {
 	@Override
 	public ListProduct loadInBackground() {
 		final List<Product> products = mPHPLocalManager.downloadProducts();
+		if (products == null || products.isEmpty()) {
+			return new ListProduct();
+		}
 		return mProducts = new ListProduct(products);
 	}
 

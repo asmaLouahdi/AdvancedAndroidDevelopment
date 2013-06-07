@@ -18,7 +18,9 @@ public class ProductManager {
 
 	public List<Product> downloadProducts() {
 		final InputStream is = mWebService.request(URL);
-		return parse(is);
+		final List<Product> products = parse(is);
+		mWebService.disconnect();
+		return products;
 	}
 
 	private List<Product> parse(final InputStream is) {

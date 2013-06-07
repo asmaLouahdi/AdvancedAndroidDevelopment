@@ -53,10 +53,6 @@ public class ProductAdapter extends BaseAdapter {
 		mItems.addAll(items);
 	}
 
-	public List<Product> getItems() {
-		return mItems;
-	}
-
 	private class ProductView extends RelativeLayout {
 		private TextView mTextViewName;
 		private TextView mTextViewType;

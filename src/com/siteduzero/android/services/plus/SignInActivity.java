@@ -35,8 +35,7 @@ public class SignInActivity extends Activity implements OnClickListener,
 	}
 
 	@Override
-	public void onConnected() {
-		// Nothing to do.
+	public void onConnected(Bundle connectionHint) {
 		Log.v("com.siteduzero.android", "" + mPlusClient.getAccountName());
 	}
 

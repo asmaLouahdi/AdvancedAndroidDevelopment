@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import android.util.Log;
 
 public class Utils {
+	private static final String TAG = "com.siteduzero.android.utils";
+
 	public static String convertInputStreamToString(InputStream is) {
 		final StringBuilder sb = new StringBuilder();
 		try {
@@ -17,7 +19,7 @@ public class Utils {
 			}
 			is.close();
 		} catch (Exception e) {
-			Log.e("com.siteduzero.android.utils", "Error converting result " + e.toString());
+			Log.e(TAG, "Error converting result " + e.toString());
 		}
 		return sb.toString();
 	}

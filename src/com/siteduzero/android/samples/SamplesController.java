@@ -10,6 +10,7 @@ import com.siteduzero.android.actionbar.ActionBarSimpleActivity;
 import com.siteduzero.android.dialog.DialogActivity;
 import com.siteduzero.android.fragments.dynamic.DynamicActivity;
 import com.siteduzero.android.fragments.fixe.FixeActivity;
+import com.siteduzero.android.fragments.multiscreens.MultiScreensActivity;
 import com.siteduzero.android.lists.custom.CustomListActivity;
 import com.siteduzero.android.lists.dynamic.DynamicListActivity;
 import com.siteduzero.android.lists.simple.SimpleListActivity;
@@ -70,6 +71,8 @@ public class SamplesController {
 				ServiceAuthorizationListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_services_sign_in,
 				R.string.part_4, R.string.chapter_3, SignInActivity.class));
+		mItems.add(new SamplesItem(R.string.title_multiple_screens,
+				R.string.no_part, R.string.no_chapter, MultiScreensActivity.class));
 	}
 
 	public static SamplesController getInstance() {

@@ -22,8 +22,10 @@
     <string name="title_remote_data">Retrieve remote data</string>
     <string name="title_services_authorization">Service Authorization</string>
     <string name="title_services_sign_in">Sign In with Google Plus</string>
+    <string name="title_multiple_screens">Multiple screens</string>
 
     <!-- Parts -->
+    <string name="no_part">No part</string>
     <string name="part_1">Part 1</string>
     <string name="part_2">Part 2</string>
     <string name="part_3">Part 3</string>
@@ -32,6 +34,7 @@
     <string name="part_6">Part 6</string>
 
     <!-- Chapters -->
+    <string name="no_chapter">No chapter</string>
     <string name="chapter_1">Chapter 1</string>
     <string name="chapter_2">Chapter 2</string>
     <string name="chapter_3">Chapter 3</string>
@@ -134,11 +137,12 @@
     <string name="menu_randoomz">Tutorial on Randoomz</string>
     <string name="menu_add">Add</string>
     <string name="menu_crop">Crop</string>
-    <string name="menu_trash">Trash</string>
+    <string name="menu_refresh">Refresh</string>
     <string name="menu_save">Save</string>
     <string name="menu_search">Search</string>
     <string name="menu_share">Share</string>
     <string name="menu_settings">Settings</string>
+    <string name="menu_trash">Trash</string>
 
     <!-- Other -->
     <string name="empty_list">Empty list</string>
