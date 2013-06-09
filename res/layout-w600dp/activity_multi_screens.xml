@@ -5,25 +5,91 @@
     android:baselineAligned="false"
     android:orientation="vertical" >
 
-    <fragment
-        android:id="@+id/fragment1"
-        android:name="com.siteduzero.android.samples.SamplesListFragment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:orientation="vertical" >
 
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="com.siteduzero.android.lists.custom.CustomListViewFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        <TextView
+            style="@style/title_multiple_screens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="20dp"
+            android:text="@string/title_samples" />
 
-    <fragment
-        android:id="@+id/fragment3"
-        android:name="com.siteduzero.android.lists.dynamic.DynamicListViewFragment"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#B2B2B2" />
+
+        <fragment
+            android:id="@+id/fragment1"
+            android:name="com.siteduzero.android.samples.SamplesListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title_multiple_screens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="20dp"
+            android:text="@string/title_listfragment_custom" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#B2B2B2" />
+
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="com.siteduzero.android.lists.custom.CustomListViewFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title_multiple_screens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="20dp"
+            android:text="@string/title_listfragment_dynamic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#B2B2B2" />
+
+        <fragment
+            android:id="@+id/fragment3"
+            android:name="com.siteduzero.android.lists.dynamic.DynamicListViewFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
 </LinearLayout>

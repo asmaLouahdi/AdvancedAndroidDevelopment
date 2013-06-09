@@ -9,12 +9,14 @@
     <string name="title_listfragment_simple">Simple list</string>
     <string name="title_listfragment_custom">Custom list</string>
     <string name="title_listfragment_dynamic">Dynamic list</string>
+    <string name="title_dynamic_ui">Dynamic UI</string>
     <string name="title_fragment_settings">PreferenceFragment</string>
     <string name="title_fragment_dialog">Dialog</string>
     <string name="title_actionbar_simple">Actionbar</string>
     <string name="title_actionbar_contextual">Actionbar contextual</string>
     <string name="title_actionbar_contextual_list">Actionbar contextual with list</string>
     <string name="title_viewpager">ViewPager</string>
+    <string name="title_multiple_screens">Multiple screens</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_nfc_emulator">NFC Emulator</string>
     <string name="title_nfc_normal">NFC Normal</string>
@@ -22,7 +24,6 @@
     <string name="title_remote_data">Retrieve remote data</string>
     <string name="title_services_authorization">Service Authorization</string>
     <string name="title_services_sign_in">Sign In with Google Plus</string>
-    <string name="title_multiple_screens">Multiple screens</string>
 
     <!-- Parts -->
     <string name="no_part">No part</string>
@@ -39,6 +40,7 @@
     <string name="chapter_2">Chapter 2</string>
     <string name="chapter_3">Chapter 3</string>
     <string name="chapter_4">Chapter 4</string>
+    <string name="chapter_5">Chapter 5</string>
 
     <!-- MainActivity -->
     <string name="img_asdroid"></string>

@@ -1,4 +1,4 @@
-package com.siteduzero.android.fragments.multiscreens;
+package com.siteduzero.android.multiscreens;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -30,7 +30,7 @@ public class MultiScreensAdapter extends FragmentPagerAdapter {
 		}
 		return null;
 	}
-	
+
 	@Override
 	public int getCount() {
 		return 3;
@@ -41,11 +41,14 @@ public class MultiScreensAdapter extends FragmentPagerAdapter {
 		String title = "";
 		switch (position) {
 		case 0:
-			title = mContext.getString(R.string.title_section1); 
+			title = mContext.getString(R.string.title_samples);
+			break;
 		case 1:
-			title = mContext.getString(R.string.title_section2);
+			title = mContext.getString(R.string.title_listfragment_custom);
+			break;
 		case 2:
-			title = mContext.getString(R.string.title_section3);
+			title = mContext.getString(R.string.title_listfragment_dynamic);
+			break;
 		}
 		return title.toUpperCase();
 	}

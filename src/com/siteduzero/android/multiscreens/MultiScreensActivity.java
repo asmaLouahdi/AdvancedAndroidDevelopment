@@ -1,4 +1,4 @@
-package com.siteduzero.android.fragments.multiscreens;
+package com.siteduzero.android.multiscreens;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;

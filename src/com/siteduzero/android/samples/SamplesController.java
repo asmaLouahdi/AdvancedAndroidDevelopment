@@ -8,12 +8,13 @@ import com.siteduzero.android.actionbar.ActionBarContextualActivity;
 import com.siteduzero.android.actionbar.ActionBarContextualListActivity;
 import com.siteduzero.android.actionbar.ActionBarSimpleActivity;
 import com.siteduzero.android.dialog.DialogActivity;
+import com.siteduzero.android.dynamicui.DynamicUIActivity;
 import com.siteduzero.android.fragments.dynamic.DynamicActivity;
 import com.siteduzero.android.fragments.fixe.FixeActivity;
-import com.siteduzero.android.fragments.multiscreens.MultiScreensActivity;
 import com.siteduzero.android.lists.custom.CustomListActivity;
 import com.siteduzero.android.lists.dynamic.DynamicListActivity;
 import com.siteduzero.android.lists.simple.SimpleListActivity;
+import com.siteduzero.android.multiscreens.MultiScreensActivity;
 import com.siteduzero.android.nfc.NFCActivity;
 import com.siteduzero.android.nfc.NFCBeamActivity;
 import com.siteduzero.android.nfc.NFCEmulatorActivity;
@@ -39,11 +40,13 @@ public class SamplesController {
 				R.string.part_1, R.string.chapter_2, CustomListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_listfragment_dynamic,
 				R.string.part_1, R.string.chapter_2, DynamicListActivity.class));
+		mItems.add(new SamplesItem(R.string.title_dynamic_ui, R.string.part_1,
+				R.string.chapter_3, DynamicUIActivity.class));
 		mItems.add(new SamplesItem(R.string.title_fragment_settings,
-				R.string.part_1, R.string.chapter_3,
+				R.string.part_1, R.string.chapter_4,
 				UsingSettingsActivity.class));
 		mItems.add(new SamplesItem(R.string.title_fragment_dialog,
-				R.string.part_1, R.string.chapter_4, DialogActivity.class));
+				R.string.part_1, R.string.chapter_5, DialogActivity.class));
 		mItems.add(new SamplesItem(R.string.title_actionbar_simple,
 				R.string.part_2, R.string.chapter_1,
 				ActionBarSimpleActivity.class));
@@ -55,15 +58,17 @@ public class SamplesController {
 				ActionBarContextualListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_viewpager, R.string.part_2,
 				R.string.chapter_2, ViewPagerActivity.class));
+		mItems.add(new SamplesItem(R.string.title_multiple_screens,
+				R.string.part_2, R.string.chapter_3, MultiScreensActivity.class));
 		mItems.add(new SamplesItem(R.string.title_notifications,
-				R.string.part_2, R.string.chapter_3,
+				R.string.part_2, R.string.chapter_4,
 				NotificationsActivity.class));
 		mItems.add(new SamplesItem(R.string.title_nfc_emulator,
-				R.string.part_2, R.string.chapter_4, NFCEmulatorActivity.class));
+				R.string.part_2, R.string.chapter_5, NFCEmulatorActivity.class));
 		mItems.add(new SamplesItem(R.string.title_nfc_normal, R.string.part_2,
-				R.string.chapter_4, NFCActivity.class));
+				R.string.chapter_5, NFCActivity.class));
 		mItems.add(new SamplesItem(R.string.title_nfc_beam, R.string.part_2,
-				R.string.chapter_4, NFCBeamActivity.class));
+				R.string.chapter_5, NFCBeamActivity.class));
 		mItems.add(new SamplesItem(R.string.title_remote_data, R.string.part_3,
 				R.string.chapter_3, PHPRequestActivity.class));
 		mItems.add(new SamplesItem(R.string.title_services_authorization,
@@ -71,8 +76,6 @@ public class SamplesController {
 				ServiceAuthorizationListActivity.class));
 		mItems.add(new SamplesItem(R.string.title_services_sign_in,
 				R.string.part_4, R.string.chapter_3, SignInActivity.class));
-		mItems.add(new SamplesItem(R.string.title_multiple_screens,
-				R.string.no_part, R.string.no_chapter, MultiScreensActivity.class));
 	}
 
 	public static SamplesController getInstance() {

@@ -33,18 +33,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Others -->
-        <activity
-            android:name=".fragments.multiscreens.MultiScreensActivity"
-            android:label="@string/title_multiple_screens" />
-        <!-- Chapter 1 -->
+        <!-- Part 1 -->
         <activity
             android:name=".fragments.fixe.FixeActivity"
             android:label="@string/title_fragment_fixe" />
         <activity
             android:name=".fragments.dynamic.DynamicActivity"
             android:label="@string/title_fragment_dynamic" />
-        <!-- Chapter 2 -->
         <activity
             android:name=".lists.simple.SimpleListActivity"
             android:label="@string/title_listfragment_simple" />
@@ -54,18 +49,19 @@
         <activity
             android:name=".lists.dynamic.DynamicListActivity"
             android:label="@string/title_listfragment_dynamic" />
-        <!-- Chapter 3 -->
+        <activity
+            android:name=".dynamicui.DynamicUIActivity"
+            android:label="@string/title_dynamic_ui" />
         <activity
             android:name=".settings.UsingSettingsActivity"
             android:label="@string/title_fragment_settings" />
         <activity
             android:name=".settings.SettingsActivity"
             android:label="@string/title_fragment_settings" />
-        <!-- Chapter 4 -->
         <activity
             android:name=".dialog.DialogActivity"
             android:label="@string/title_fragment_dialog" />
-        <!-- Chapter 5 -->
+        <!-- Part 2 -->
         <activity
             android:name=".actionbar.ActionBarSimpleActivity"
             android:label="@string/title_actionbar_simple"
@@ -79,11 +75,12 @@
         <activity
             android:name=".viewpager.ViewPagerActivity"
             android:label="@string/title_viewpager" />
-        <!-- Chapter 7 -->
+        <activity
+            android:name=".multiscreens.MultiScreensActivity"
+            android:label="@string/title_multiple_screens" />
         <activity
             android:name=".notifications.NotificationsActivity"
             android:label="@string/title_notifications" />
-        <!-- Chapter 8 -->
         <activity
             android:name=".nfc.NFCEmulatorActivity"
             android:label="@string/title_nfc_emulator" />
@@ -109,7 +106,7 @@
                 <data android:mimeType="application/com.siteduzero.android.nfc" />
             </intent-filter>
         </activity>
-        <!-- Chapter 9 -->
+        <!-- Part 3 -->
         <activity
             android:name=".requests.PHPRequestActivity"
             android:label="@string/title_remote_data" />
