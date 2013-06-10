@@ -66,6 +66,8 @@
         <item>Suisse</item>
     </string-array>
 
+    <string name="img_country">Flag of country</string>
+
     <!-- Dialog -->
     <string name="btn_launch_dialog">DialogFragment</string>
     <string name="btn_launch_alert">AlertDialog</string>

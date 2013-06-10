@@ -1,11 +1,11 @@
 package com.siteduzero.android.samples;
 
-import com.siteduzero.android.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.siteduzero.android.R;
 
 public class SamplesView extends RelativeLayout {
 	private TextView mTextViewTitle;
