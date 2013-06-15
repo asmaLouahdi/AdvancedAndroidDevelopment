@@ -1,4 +1,4 @@
-package com.siteduzero.android.viewpager;
+package com.siteduzero.android.navigation.viewpager;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;

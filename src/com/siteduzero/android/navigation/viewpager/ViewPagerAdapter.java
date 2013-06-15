@@ -1,4 +1,4 @@
-package com.siteduzero.android.viewpager;
+package com.siteduzero.android.navigation.viewpager;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;

@@ -16,6 +16,8 @@
     <string name="title_actionbar_contextual">Actionbar contextual</string>
     <string name="title_actionbar_contextual_list">Actionbar contextual with list</string>
     <string name="title_viewpager">ViewPager</string>
+    <string name="title_sliding_pane">Sliding Pane Layout</string>
+    <string name="title_drawer">Drawer Layout</string>
     <string name="title_multiple_screens">Multiple screens</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_nfc_emulator">NFC Emulator</string>
@@ -149,6 +151,8 @@
     <string name="menu_trash">Trash</string>
 
     <!-- Other -->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
     <string name="empty_list">Empty list</string>
     <string name="waiting">Wainting &#8230;</string>
     <string name="default_lorem">Haec igitur lex in amicitia sanciatur, ut neque rogemus res turpes nec faciamus rogati. Turpis enim excusatio est et minime accipienda cum in ceteris peccatis, tum si quis contra rem publicam se amici causa fecisse fateatur. Etenim eo loco, Fanni et Scaevola, locati sumus ut nos longe prospicere oporteat futuros casus rei publicae. Deflexit iam aliquantum de spatio curriculoque consuetudo maiorum.</string>

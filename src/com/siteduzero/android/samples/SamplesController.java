@@ -15,6 +15,9 @@ import com.siteduzero.android.lists.custom.CustomListActivity;
 import com.siteduzero.android.lists.dynamic.DynamicListActivity;
 import com.siteduzero.android.lists.simple.SimpleListActivity;
 import com.siteduzero.android.multiscreens.MultiScreensActivity;
+import com.siteduzero.android.navigation.drawer.DrawerLayoutActivity;
+import com.siteduzero.android.navigation.slidingpane.SlidingPaneLayoutActivity;
+import com.siteduzero.android.navigation.viewpager.ViewPagerActivity;
 import com.siteduzero.android.nfc.NFCActivity;
 import com.siteduzero.android.nfc.NFCBeamActivity;
 import com.siteduzero.android.nfc.NFCEmulatorActivity;
@@ -23,7 +26,6 @@ import com.siteduzero.android.requests.PHPRequestActivity;
 import com.siteduzero.android.services.auth.ServiceAuthorizationListActivity;
 import com.siteduzero.android.services.plus.SignInActivity;
 import com.siteduzero.android.settings.UsingSettingsActivity;
-import com.siteduzero.android.viewpager.ViewPagerActivity;
 
 public class SamplesController {
 	private static final SamplesController INSTANCE = new SamplesController();
@@ -56,6 +58,11 @@ public class SamplesController {
 		mItems.add(new SamplesItem(R.string.title_actionbar_contextual_list,
 				R.string.part_2, R.string.chapter_1,
 				ActionBarContextualListActivity.class));
+		mItems.add(new SamplesItem(R.string.title_drawer, R.string.part_2,
+				R.string.chapter_2, DrawerLayoutActivity.class));
+		mItems.add(new SamplesItem(R.string.title_sliding_pane,
+				R.string.part_2, R.string.chapter_2,
+				SlidingPaneLayoutActivity.class));
 		mItems.add(new SamplesItem(R.string.title_viewpager, R.string.part_2,
 				R.string.chapter_2, ViewPagerActivity.class));
 		mItems.add(new SamplesItem(R.string.title_multiple_screens,

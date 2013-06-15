@@ -73,7 +73,13 @@
             android:name=".actionbar.ActionBarContextualListActivity"
             android:label="@string/title_actionbar_contextual_list" />
         <activity
-            android:name=".viewpager.ViewPagerActivity"
+            android:name=".navigation.drawer.DrawerLayoutActivity"
+            android:label="@string/title_drawer" />
+        <activity
+            android:name=".navigation.slidingpane.SlidingPaneLayoutActivity"
+            android:label="@string/title_sliding_pane" />
+        <activity
+            android:name=".navigation.viewpager.ViewPagerActivity"
             android:label="@string/title_viewpager" />
         <activity
             android:name=".multiscreens.MultiScreensActivity"
