@@ -1,4 +1,4 @@
-package com.siteduzero.android.requests;
+package com.siteduzero.android.requests.products;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -7,20 +7,22 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.siteduzero.android.requests.Manager;
 import com.siteduzero.android.utils.Utils;
 
-public class ProductManager {
-	private static final String TAG = "com.siteduzero.android.requests.php";
-	private static final String URL = "http://192.168.0.100:8888/AdvancedAndroidDevelopment/products.php";
-	private final WebService mWebService = new WebService();
+public class ProductManager extends Manager {
+	private static final String URL = "http://" + DOMAIN
+			+ ":8888/AdvancedAndroidDevelopment/products.php";
 
-	public List<Product> downloadProducts() {
-		final InputStream is = mWebService.request(URL);
-		final List<Product> products = parse(is);
-		mWebService.disconnect();
-		return products;
+	public ProductManager(final Context context) {
+		super(context);
+	}
+
+	protected List<Product> request() {
+		return parse(mWebService.post(URL, null, false));
 	}
 
 	private List<Product> parse(final InputStream is) {

@@ -1,4 +1,4 @@
-package com.siteduzero.android.requests;
+package com.siteduzero.android.requests.products;
 
 import org.json.JSONObject;
 

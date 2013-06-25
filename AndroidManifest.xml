@@ -114,8 +114,11 @@
         </activity>
         <!-- Part 3 -->
         <activity
-            android:name=".requests.PHPRequestActivity"
+            android:name="com.siteduzero.android.requests.products.PHPRequestActivity"
             android:label="@string/title_remote_data" />
+        <activity
+            android:name="com.siteduzero.android.requests.security.AuthenticationActivity"
+            android:label="@string/title_request_auth" />
         <!-- Part 4 -->
         <activity
             android:name=".services.auth.ServiceAuthorizationListActivity"

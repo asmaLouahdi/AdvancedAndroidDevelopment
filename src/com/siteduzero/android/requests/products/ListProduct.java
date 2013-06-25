@@ -1,4 +1,4 @@
-package com.siteduzero.android.requests;
+package com.siteduzero.android.requests.products;
 
 import java.util.ArrayList;
 import java.util.List;

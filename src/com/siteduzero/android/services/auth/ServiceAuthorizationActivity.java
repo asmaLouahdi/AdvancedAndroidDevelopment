@@ -38,11 +38,12 @@ public class ServiceAuthorizationActivity extends Activity {
 	private static class AuthorizationAsyncTask extends
 			AsyncTask<String, Void, UserInformation> {
 		private final ServiceAuthorizationActivity mActivity;
-		private final AuthorizationManager mAuthorizationManager = new AuthorizationManager();
+		private final AuthorizationManager mAuthorizationManager;
 
 		public AuthorizationAsyncTask(
 				final ServiceAuthorizationActivity activity) {
 			mActivity = activity;
+			mAuthorizationManager = new AuthorizationManager(activity);
 		}
 
 		@Override
@@ -53,13 +54,15 @@ public class ServiceAuthorizationActivity extends Activity {
 						account, SCOPE);
 				return mAuthorizationManager.downloadUserInformation(token);
 			} catch (UserRecoverableAuthException e) {
-				Log.v(TAG, "[UserRecoverableAuthException] " + e.getMessage());
+				Log.v(TAG,
+						"[UserRecoverableAuthException] message : "
+								+ e.getMessage());
 				mActivity.startActivityForResult(e.getIntent(),
 						REQUEST_AUTHORIZATION);
 			} catch (IOException e) {
-				Log.v(TAG, "[IOException] " + e.getMessage());
+				Log.v(TAG, "[IOException] message : " + e.getMessage());
 			} catch (GoogleAuthException e) {
-				Log.v(TAG, "[GoogleAuthException] " + e.getMessage());
+				Log.v(TAG, "[GoogleAuthException] message : " + e.getMessage());
 			}
 			return null;
 		}
@@ -67,8 +70,10 @@ public class ServiceAuthorizationActivity extends Activity {
 		@Override
 		protected void onPostExecute(UserInformation result) {
 			super.onPostExecute(result);
-			mActivity.mTextViewName.setText(result.getName());
-			mActivity.mTextViewGender.setText(result.getGender());
+			if (result != null) {
+				mActivity.mTextViewName.setText(result.getName());
+				mActivity.mTextViewGender.setText(result.getGender());
+			}
 		}
 	}
 }

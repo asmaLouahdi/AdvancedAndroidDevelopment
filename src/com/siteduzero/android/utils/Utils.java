@@ -23,4 +23,8 @@ public class Utils {
 		}
 		return sb.toString();
 	}
+	
+	public static boolean checkString(final String value) {
+		return value == null || value.isEmpty();
+	}
 }
