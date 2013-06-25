@@ -22,7 +22,7 @@ public class ProductManager extends Manager {
 	}
 
 	protected List<Product> request() {
-		return parse(mWebService.post(URL, null, false));
+		return parse(mWebService.post(URL, null, true));
 	}
 
 	private List<Product> parse(final InputStream is) {

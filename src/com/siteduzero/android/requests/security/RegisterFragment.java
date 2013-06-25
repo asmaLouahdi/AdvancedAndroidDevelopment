@@ -1,9 +1,6 @@
 package com.siteduzero.android.requests.security;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,12 +12,7 @@ import android.widget.Toast;
 import com.siteduzero.android.R;
 import com.siteduzero.android.utils.Utils;
 
-public class RegisterFragment extends Fragment implements
-		LoaderManager.LoaderCallbacks<String> {
-	private static final int ID_LOADER_REGISTER = 0;
-	private static final String KEY_EMAIL = "email";
-	private static final String KEY_PASSWORD = "password";
-
+public class RegisterFragment extends TokenFragment {
 	// GUI
 	private EditText mEmail;
 	private EditText mPassword;
@@ -101,25 +93,5 @@ public class RegisterFragment extends Fragment implements
 		bundle.putString(KEY_EMAIL, email);
 		bundle.putString(KEY_PASSWORD, password);
 		getLoaderManager().initLoader(ID_LOADER_REGISTER, bundle, this);
-	}
-
-	@Override
-	public Loader<String> onCreateLoader(int id, Bundle bundle) {
-		final String email = bundle.getString(KEY_EMAIL);
-		final String password = bundle.getString(KEY_PASSWORD);
-		return new RegisterAsyncTaskLoader(getActivity(), email, password);
-	}
-
-	@Override
-	public void onLoadFinished(Loader<String> loader, String data) {
-		if (data != null && !data.isEmpty()) {
-			Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT).show();
-			SessionStore.saveAccessToken(data, getActivity());
-		}
-	}
-
-	@Override
-	public void onLoaderReset(Loader<String> arg0) {
-		// Nothing to do here.
 	}
 }

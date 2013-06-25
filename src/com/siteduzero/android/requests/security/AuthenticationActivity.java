@@ -37,7 +37,7 @@ public class AuthenticationActivity extends FragmentActivity implements
 
 	private void initializeGUI() {
 		// If we launch a ViewPager for GUI, we initialize this component.
-		if (findViewById(R.id.view_pager_authentification) != null) {
+		if (findViewById(R.id.view_pager_authentication) != null) {
 			// Set up the adapter.
 			mAdapter = new AuthenticationAdapter(getSupportFragmentManager(),
 					this);
@@ -47,7 +47,7 @@ public class AuthenticationActivity extends FragmentActivity implements
 			actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 			// Set up the ViewPager with the sections adapter.
-			mViewPager = (ViewPager) findViewById(R.id.view_pager_authentification);
+			mViewPager = (ViewPager) findViewById(R.id.view_pager_authentication);
 			mViewPager.setAdapter(mAdapter);
 
 			// Set up the gesture to swipe between tab.

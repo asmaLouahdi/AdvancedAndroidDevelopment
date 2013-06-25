@@ -1,7 +1,6 @@
 package com.siteduzero.android.requests.security;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,7 +12,7 @@ import android.widget.Toast;
 import com.siteduzero.android.R;
 import com.siteduzero.android.utils.Utils;
 
-public class AuthenticationFragment extends Fragment {
+public class AuthenticationFragment extends TokenFragment {
 	// Connection
 	private final Authentication mAuthentication = new Authentication();
 
@@ -42,6 +41,10 @@ public class AuthenticationFragment extends Fragment {
 		if (mAuthentication.isLoginValid()) {
 			Toast.makeText(getActivity(), "Get a new token on the server.",
 					Toast.LENGTH_SHORT).show();
+			final Bundle bundle = new Bundle();
+			bundle.putString(KEY_EMAIL, mAuthentication.getEmail());
+			bundle.putString(KEY_PASSWORD, mAuthentication.getPassword());
+			getLoaderManager().initLoader(ID_LOADER_AUTH, bundle, this);
 		}
 
 		mLogin.setOnClickListener(new OnClickListener() {
@@ -67,5 +70,9 @@ public class AuthenticationFragment extends Fragment {
 		}
 		Toast.makeText(getActivity(), "Successful login.", Toast.LENGTH_SHORT)
 				.show();
+		final Bundle bundle = new Bundle();
+		bundle.putString(KEY_EMAIL, mAuthentication.getEmail());
+		bundle.putString(KEY_PASSWORD, mAuthentication.getPassword());
+		getLoaderManager().initLoader(ID_LOADER_AUTH, bundle, this);
 	}
 }

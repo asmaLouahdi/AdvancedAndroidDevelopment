@@ -3,13 +3,13 @@ package com.siteduzero.android.requests.security;
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 
-public class RegisterAsyncTaskLoader extends AsyncTaskLoader<String> {
+public class AuthenticationAsyncTaskLoader extends AsyncTaskLoader<String> {
 	private final TokenManager mTokenManager;
 	private final String mEmail;
 	private final String mPassword;
 	private String mToken;
 
-	public RegisterAsyncTaskLoader(Context context, final String email,
+	public AuthenticationAsyncTaskLoader(Context context, final String email,
 			final String password) {
 		super(context);
 		mTokenManager = new TokenManager(context);
@@ -19,7 +19,7 @@ public class RegisterAsyncTaskLoader extends AsyncTaskLoader<String> {
 
 	@Override
 	public String loadInBackground() {
-		return mTokenManager.register(mEmail, mPassword);
+		return mTokenManager.auth(mEmail, mPassword);
 	}
 
 	@Override
