@@ -13,8 +13,9 @@ public class DynamicActivity extends FragmentActivity {
 	private static final String KEY_FRAGMENT = "fragment_save";
 
 	private String mFragment;
-	private Dynamic1Fragment mDynamic1Fragment;
-	private Dynamic2Fragment mDynamic2Fragment;
+	// We instantiate just one time fragments during the live of the activity.
+	private final Dynamic1Fragment mDynamic1Fragment = new Dynamic1Fragment();
+	private final Dynamic2Fragment mDynamic2Fragment = new Dynamic2Fragment();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,11 @@ public class DynamicActivity extends FragmentActivity {
 		else
 			mFragment = getIntent().getStringExtra(KEY_FRAGMENT);
 
-		setupFragments();
 		if (mFragment != null) {
 			if (mFragment.equals(mDynamic1Fragment.getClass().getSimpleName())) {
 				showFragment(this.mDynamic1Fragment);
-			} else if (mFragment.equals(mDynamic2Fragment.getClass().getSimpleName())) {
+			} else if (mFragment.equals(mDynamic2Fragment.getClass()
+					.getSimpleName())) {
 				showFragment(this.mDynamic2Fragment);
 			}
 		} else {
@@ -42,13 +43,6 @@ public class DynamicActivity extends FragmentActivity {
 	protected void onSaveInstanceState(Bundle outState) {
 		outState.putString(KEY_FRAGMENT, mFragment != null ? mFragment : "");
 		super.onSaveInstanceState(outState);
-	}
-
-	private void setupFragments() {
-		// We instantiate just one time instance of fragments during the live of
-		// the activity.
-		this.mDynamic1Fragment = new Dynamic1Fragment();
-		this.mDynamic2Fragment = new Dynamic2Fragment();
 	}
 
 	private void showFragment(final Fragment fragment) {
@@ -68,7 +62,6 @@ public class DynamicActivity extends FragmentActivity {
 		// Null on the back stack to return on the previous fragment when user
 		// press on back button.
 		ft.addToBackStack(null);
-		ft.setBreadCrumbShortTitle("Test");
 
 		// Commit changes.
 		ft.commit();
