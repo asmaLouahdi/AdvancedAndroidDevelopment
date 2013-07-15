@@ -160,6 +160,11 @@
     <string name="request_register">Register</string>
     <string name="request_section_login">LOGIN</string>
     <string name="request_section_register">REGISTER</string>
+    
+    <!-- Network security -->
+    <string name="security_error_field_required">A value required.</string>
+    <string name="security_invalid_email">Invalid email</string>
+    <string name="security_invalid_password">Invalid password. 6 caracters min.</string>
 
     <!-- Other -->
     <string name="drawer_open">Open navigation drawer</string>

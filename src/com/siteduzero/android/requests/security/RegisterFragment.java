@@ -1,6 +1,7 @@
 package com.siteduzero.android.requests.security;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,7 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.siteduzero.android.R;
-import com.siteduzero.android.utils.Utils;
 
 public class RegisterFragment extends TokenFragment {
 	// GUI
@@ -67,17 +67,17 @@ public class RegisterFragment extends TokenFragment {
 		final String email = mEmail.getText().toString();
 		final String password = mPassword.getText().toString();
 		final String confirmPassword = mConfirmPassword.getText().toString();
-		if (Utils.checkString(email)) {
+		if (TextUtils.isEmpty(email)) {
 			Toast.makeText(getActivity(), "You must specify an email.",
 					Toast.LENGTH_SHORT).show();
 			return;
 		}
-		if (Utils.checkString(password)) {
+		if (TextUtils.isEmpty(password)) {
 			Toast.makeText(getActivity(), "You must specify a password.",
 					Toast.LENGTH_SHORT).show();
 			return;
 		}
-		if (Utils.checkString(confirmPassword)) {
+		if (TextUtils.isEmpty(confirmPassword)) {
 			Toast.makeText(getActivity(),
 					"You must specify a confirm password.", Toast.LENGTH_SHORT)
 					.show();
