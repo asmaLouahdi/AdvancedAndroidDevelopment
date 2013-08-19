@@ -18,7 +18,7 @@ public class DynamicUIActivity extends FragmentActivity implements
 		if (findViewById(R.id.frameLayoutDynamicUi) != null) {
 			final CountryListFragment listFragment = new CountryListFragment();
 			getSupportFragmentManager().beginTransaction()
-					.replace(R.id.frameLayoutDynamicUi, listFragment).commit();
+					.add(R.id.frameLayoutDynamicUi, listFragment).commit();
 		}
 	}
 
