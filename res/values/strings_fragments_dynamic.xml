@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="btn_fragment_1">Go to fragment 2</string>
+    <string name="btn_fragment_2">Go to fragment 1</string>
+
+</resources>

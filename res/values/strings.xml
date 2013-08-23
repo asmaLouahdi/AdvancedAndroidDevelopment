@@ -2,82 +2,6 @@
 
     <string name="app_name">Android development</string>
 
-    <!-- Titles -->
-    <string name="title_samples">Samples</string>
-    <string name="title_fragment_fixe">Fixe fragment</string>
-    <string name="title_fragment_dynamic">Dynamic fragment</string>
-    <string name="title_listfragment_simple">Simple list</string>
-    <string name="title_listfragment_custom">Custom list</string>
-    <string name="title_listfragment_dynamic">Dynamic list</string>
-    <string name="title_dynamic_ui">Dynamic UI</string>
-    <string name="title_fragment_settings">PreferenceFragment</string>
-    <string name="title_fragment_dialog">Dialog</string>
-    <string name="title_actionbar_simple">Actionbar</string>
-    <string name="title_actionbar_contextual">Actionbar contextual</string>
-    <string name="title_actionbar_contextual_list">Actionbar contextual with list</string>
-    <string name="title_viewpager">ViewPager</string>
-    <string name="title_sliding_pane">Sliding Pane Layout</string>
-    <string name="title_drawer">Drawer Layout</string>
-    <string name="title_multiple_screens">Multiple screens</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_nfc_emulator">NFC Emulator</string>
-    <string name="title_nfc_normal">NFC Normal</string>
-    <string name="title_nfc_beam">NFC Beam</string>
-    <string name="title_remote_data">Retrieve remote data</string>
-    <string name="title_request_auth">Authentication</string>
-    <string name="title_services_authorization">Service Authorization</string>
-    <string name="title_services_sign_in">Sign In with Google Plus</string>
-
-    <!-- Parts -->
-    <string name="no_part">No part</string>
-    <string name="part_1">Part 1</string>
-    <string name="part_2">Part 2</string>
-    <string name="part_3">Part 3</string>
-    <string name="part_4">Part 4</string>
-    <string name="part_5">Part 5</string>
-    <string name="part_6">Part 6</string>
-
-    <!-- Chapters -->
-    <string name="no_chapter">No chapter</string>
-    <string name="chapter_1">Chapter 1</string>
-    <string name="chapter_2">Chapter 2</string>
-    <string name="chapter_3">Chapter 3</string>
-    <string name="chapter_4">Chapter 4</string>
-    <string name="chapter_5">Chapter 5</string>
-
-    <!-- MainActivity -->
-    <string name="btn_samples">Samples</string>
-    <string name="btn_sdz">Go to tutorial on the \"Site du Zéro\"</string>
-    <string name="btn_sdz_beta">Go to beta version of the tutorial</string>
-    <string name="btn_source">Get source codes</string>
-
-    <!-- Fragments -->
-    <string name="btn_fragment_1">Go to fragment 2</string>
-    <string name="btn_fragment_2">Go to fragment 1</string>
-
-    <!-- ListView -->
-    <string name="text_empty">No item in your ListView</string>
-    <string name="image_avatar_description">Avatar of the user</string>
-
-    <string-array name="list_examples">
-        <item>Belgique</item>
-        <item>France</item>
-        <item>Italie</item>
-        <item>Espagne</item>
-        <item>Portugal</item>
-        <item>Suisse</item>
-    </string-array>
-
-    <string name="img_country">Flag of country</string>
-
-    <!-- Dialog -->
-    <string name="btn_launch_dialog">DialogFragment</string>
-    <string name="btn_launch_alert">AlertDialog</string>
-    <string name="text_dialog">Text of the DialogFragment</string>
-    <string name="btn_dialog">Button of Dialog</string>
-    <string name="alert_dialog_ok">Good</string>
-    <string name="alert_dialog_cancel">Cancel</string>
-
     <!-- Actionbar -->
     <string name="btn_contextual">Contextual menu</string>
     <string name="toast_home">Return home</string>
@@ -134,7 +58,7 @@
     <string name="request_register">Register</string>
     <string name="request_section_login">LOGIN</string>
     <string name="request_section_register">REGISTER</string>
-    
+
     <!-- Network security -->
     <string name="security_error_field_required">A value required.</string>
     <string name="security_invalid_email">Invalid email</string>
