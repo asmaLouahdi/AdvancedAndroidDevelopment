@@ -78,32 +78,6 @@
     <string name="alert_dialog_ok">Good</string>
     <string name="alert_dialog_cancel">Cancel</string>
 
-    <!-- Preferences -->
-    <string name="title_header_1">Header preference 1</string>
-    <string name="summary_header_1">Summary header 1</string>
-    <string name="title_category_1">Category 1</string>
-    <string name="title_category_2">Category 2</string>
-    <string name="title_pref_1">Preference 1</string>
-    <string name="summary_pref_1">Summary preference 1</string>
-    <string name="title_pref_2">Preference 2</string>
-    <string name="summary_pref_2">Summary preference 2</string>
-    <string name="title_pref_3">Preference 3</string>
-    <string name="summary_pref_3">Summary preference 3</string>
-    <string name="switch_off_pref_3">OFF</string>
-    <string name="switch_on_pref_3">ON</string>
-    <string name="title_pref_4">Preference 4</string>
-    <string name="summary_pref_4">Summary preference 4</string>
-    <string name="title_pref_5">Preference 5</string>
-    <string name="summary_pref_5">Summary preference 5</string>
-    <string name="title_pref_6">Preference 6</string>
-    <string name="summary_pref_6">Summary preference 6</string>
-
-    <string-array name="list_pref_5">
-        <item>List Preference 1</item>
-        <item>List Preference 2</item>
-        <item>List Preference 3</item>
-    </string-array>
-
     <!-- Actionbar -->
     <string name="btn_contextual">Contextual menu</string>
     <string name="toast_home">Return home</string>

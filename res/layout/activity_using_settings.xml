@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="@string/title_pref_1" />
+            android:text="@string/title_pref_checkbox" />
 
         <TextView
             android:id="@+id/textViewPref1"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="@string/title_pref_2" />
+            android:text="@string/title_pref_simple" />
 
         <TextView
             android:id="@+id/textViewPref2"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="@string/title_pref_3" />
+            android:text="@string/title_pref_switch" />
 
         <TextView
             android:id="@+id/textViewPref3"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="@string/title_pref_4" />
+            android:text="@string/title_pref_edit" />
 
         <TextView
             android:id="@+id/textViewPref4"
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="@string/title_pref_5" />
+            android:text="@string/title_pref_list" />
 
         <TextView
             android:id="@+id/textViewPref5"
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:text="@string/title_pref_6" />
+            android:text="@string/title_pref_ringtone" />
 
         <TextView
             android:id="@+id/textViewPref6"

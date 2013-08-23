@@ -11,11 +11,6 @@ import android.widget.TextView;
 
 import com.siteduzero.android.R;
 
-/**
- * We can't use this with ACL !
- * 
- * @author Gerard
- */
 public class UsingSettingsActivity extends Activity {
 	private TextView mTextViewPref1;
 	private TextView mTextViewPref2;

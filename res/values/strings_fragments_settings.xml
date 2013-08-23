@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Headers -->
+    <string name="title_header_edit">Header for edit preferences</string>
+    <string name="summary_header_edit">Summary header for edit preferences</string>
+    <string name="title_header_agenda">Header for agenda preferences</string>
+    <string name="summary_header_agenda">Summary header for agenda preferences</string>
+
+    <!-- Categories -->
+    <string name="title_category_1">Category 1</string>
+    <string name="title_category_2">Category 2</string>
+
+    <!-- Screens -->
+    <string name="title_screen">Screen preference</string>
+
+    <!-- Preferences -->
+    <string name="title_pref_checkbox">Checkbox preference</string>
+    <string name="title_pref_simple">Simple Preference</string>
+    <string name="title_pref_switch">Switch Preference</string>
+    <string name="title_pref_edit">EditText Preference</string>
+    <string name="title_pref_list">List Preference</string>
+    <string name="title_pref_ringtone">Ringtone Preference</string>
+    <string name="summary_pref_checkbox">Summary preference for a checkbox preference</string>
+    <string name="summary_pref_simple">Summary preference for a simple preference</string>
+    <string name="summary_pref_switch">Summary preference for a switch preference</string>
+    <string name="summary_pref_edit">Summary preference for a edit text preference</string>
+    <string name="summary_pref_list">Summary preference for a list preference</string>
+    <string name="summary_pref_ringtone">Summary preference for a ringtone preference</string>
+
+    <!-- Specific for some preferences -->
+    <string name="switch_off_switch">OFF</string>
+    <string name="switch_on_switch">ON</string>
+
+    <string-array name="list_pref">
+        <item>List Preference 1</item>
+        <item>List Preference 2</item>
+        <item>List Preference 3</item>
+    </string-array>
+
+</resources>

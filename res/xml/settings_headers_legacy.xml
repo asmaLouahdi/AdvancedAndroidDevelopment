@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:icon="@android:drawable/ic_menu_edit"
+        android:summary="@string/summary_header_edit"
+        android:title="@string/title_header_edit" >
+        <intent
+            android:action="com.siteduzero.android.settings.EDIT"
+            android:targetClass="com.siteduzero.android.settings.SettingsActivity"
+            android:targetPackage="com.siteduzero.android.settings" />
+    </Preference>
+    <Preference
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:summary="@string/summary_header_agenda"
+        android:title="@string/title_header_edit" >
+        <intent
+            android:action="com.siteduzero.android.settings.AGENDA"
+            android:targetClass="com.siteduzero.android.settings.SettingsActivity"
+            android:targetPackage="com.siteduzero.android.settings" />
+    </Preference>
+
+</PreferenceScreen>

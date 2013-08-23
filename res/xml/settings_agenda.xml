@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="pref_key_category_11"
+        android:title="@string/title_category_1" >
+        <EditTextPreference
+            android:key="pref_key_pref_11"
+            android:summary="@string/summary_pref_edit"
+            android:title="@string/title_pref_edit" />
+
+        <ListPreference
+            android:entries="@array/list_pref"
+            android:entryValues="@array/list_pref"
+            android:key="pref_key_pref_12"
+            android:summary="@string/summary_pref_list"
+            android:title="@string/title_pref_list" />
+
+        <RingtonePreference
+            android:key="pref_key_pref_13"
+            android:ringtoneType="ringtone"
+            android:summary="@string/summary_pref_ringtone"
+            android:title="@string/title_pref_ringtone" />
+
+        <PreferenceScreen
+            android:key="pref_key_screen"
+            android:persistent="false"
+            android:title="@string/title_screen" >
+            <Preference
+                android:summary="@string/summary_pref_simple"
+                android:title="@string/title_pref_simple" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_category_12"
+        android:title="@string/title_category_2" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_key_pref_14"
+            android:summary="@string/summary_pref_checkbox"
+            android:title="@string/title_pref_checkbox" />
+
+        <Preference
+            android:dependency="pref_key_pref_14"
+            android:key="pref_key_pref_15"
+            android:summary="@string/summary_pref_simple"
+            android:title="@string/title_pref_simple" />
+
+        <SwitchPreference
+            android:key="pref_key_pref_16"
+            android:summary="@string/summary_pref_switch"
+            android:switchTextOff="@string/switch_off_switch"
+            android:switchTextOn="@string/switch_on_switch"
+            android:title="@string/title_pref_switch" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
