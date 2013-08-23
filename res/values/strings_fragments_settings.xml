@@ -29,6 +29,7 @@
     <string name="summary_pref_ringtone">Summary preference for a ringtone preference</string>
 
     <!-- Specific for some preferences -->
+    <string name="change_settings">You actived the checkbox preference</string>
     <string name="switch_off_switch">OFF</string>
     <string name="switch_on_switch">ON</string>
 
