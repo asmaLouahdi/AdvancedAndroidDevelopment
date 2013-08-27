@@ -8,14 +8,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:onClick="showDialogFragment"
-        android:text="@string/btn_launch_dialog" />
+        android:onClick="showBasicAlertDialog"
+        android:text="@string/title_basic_alert" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:onClick="showAlertDialog"
-        android:text="@string/btn_launch_alert" />
+        android:onClick="showListAlertDialog"
+        android:text="@string/title_list_alert" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="showMultiAlertDialog"
+        android:text="@string/title_multi_alert" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="showCustomAlertDialog"
+        android:text="@string/title_custom_alert" />
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="showDialogFragment"
+        android:text="@string/title_dialog" />
 
 </LinearLayout>

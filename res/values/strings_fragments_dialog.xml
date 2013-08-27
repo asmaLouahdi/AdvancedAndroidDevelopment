@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="btn_launch_dialog">DialogFragment</string>
-    <string name="btn_launch_alert">AlertDialog</string>
-    <string name="text_dialog">Text of the DialogFragment</string>
-    <string name="btn_dialog">Button of Dialog</string>
-    <string name="alert_dialog_ok">Good</string>
+    <!-- Activity host -->
+    <string name="title_basic_alert">Basic AlertDialog</string>
+    <string name="title_list_alert">List AlertDialog</string>
+    <string name="title_multi_alert">Multi AlertDialog</string>
+    <string name="title_custom_alert">Custom AlertDialog</string>
+    <string name="title_dialog">DialogFragment</string>
+
+    <!-- Basic AlertDialog -->
+    <string name="text_alert">What\'s the answer of the universe ?</string>
+    <string name="alert_dialog_ok">42</string>
+    <string name="alert_dialog_neutral">Cat ?</string>
     <string name="alert_dialog_cancel">Cancel</string>
+
+    <!-- List in AlertDialog -->
+    <string-array name="array_mario">
+        <item>Mario</item>
+        <item>Luigi</item>
+        <item>Peach</item>
+    </string-array>
+
+    <!-- DialogFragment -->
+    <string name="hint_email">email@example.com</string>
+    <string name="hint_password">Password</string>
 
 </resources>
