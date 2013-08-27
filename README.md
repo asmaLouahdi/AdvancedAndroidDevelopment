@@ -4,7 +4,7 @@ Tutorial during migration on <a href="http://www.randoomz.org">Randoomz</a>.
 
 __You must include Google Play Services Library to execute this project__
 
-# Licence #
+# License #
 <pre>
 Copyright 2013 Gérard Paligot
 
