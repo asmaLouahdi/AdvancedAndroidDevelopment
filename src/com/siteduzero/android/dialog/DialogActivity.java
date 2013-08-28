@@ -1,5 +1,7 @@
 package com.siteduzero.android.dialog;
 
+import java.util.Calendar;
+
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -8,15 +10,19 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
 import com.siteduzero.android.R;
+import com.siteduzero.android.dialog.DateDialog.DateSelected;
+import com.siteduzero.android.dialog.TimeDialog.TimeSelected;
 
 public class DialogActivity extends FragmentActivity implements
-		NoticeHostComponent {
+		NoticeHostComponent, DateSelected, TimeSelected {
 	private static final String KEY_DIALOG = "dialog";
 	private static final int TYPE_DIALOG_FRAGMENT = 1;
 	private static final int TYPE_BASIC_ALERT_DIALOG = 2;
 	private static final int TYPE_LIST_ALERT_DIALOG = 3;
 	private static final int TYPE_MULTI_ALERT_DIALOG = 4;
 	private static final int TYPE_CUSTOM_ALERT_DIALOG = 5;
+	private static final int TYPE_DATE_DIALOG = 6;
+	private static final int TYPE_TIME_DIALOG = 7;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -44,9 +50,18 @@ public class DialogActivity extends FragmentActivity implements
 		showDialogType(TYPE_CUSTOM_ALERT_DIALOG);
 	}
 
+	public void showDateDialog(View v) {
+		showDialogType(TYPE_DATE_DIALOG);
+	}
+
+	public void showTimeDialog(View v) {
+		showDialogType(TYPE_TIME_DIALOG);
+	}
+
 	private void showDialogType(int type) {
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		Fragment prev = getSupportFragmentManager().findFragmentByTag(KEY_DIALOG);
+		Fragment prev = getSupportFragmentManager().findFragmentByTag(
+				KEY_DIALOG);
 		if (prev != null) {
 			ft.remove(prev);
 		}
@@ -73,6 +88,12 @@ public class DialogActivity extends FragmentActivity implements
 			newFragment = CustomAlertDialog
 					.newInstance(R.string.title_custom_alert);
 			break;
+		case TYPE_DATE_DIALOG:
+			newFragment = DateDialog.newInstance(Calendar.getInstance());
+			break;
+		case TYPE_TIME_DIALOG:
+			newFragment = TimeDialog.newInstance(Calendar.getInstance());
+			break;
 		}
 		newFragment.show(ft, KEY_DIALOG);
 	}
@@ -89,6 +110,16 @@ public class DialogActivity extends FragmentActivity implements
 
 	@Override
 	public void onNeutralClick() {
+		// TODO Do something
+	}
+
+	@Override
+	public void onDateSelected(Calendar calendar) {
+		// TODO Do something
+	}
+
+	@Override
+	public void onTimeSelected(Calendar calendar) {
 		// TODO Do something
 	}
 }

@@ -6,6 +6,8 @@
     <string name="title_list_alert">List AlertDialog</string>
     <string name="title_multi_alert">Multi AlertDialog</string>
     <string name="title_custom_alert">Custom AlertDialog</string>
+    <string name="title_date_dialog">DateDialog</string>
+    <string name="title_time_dialog">TimeDialog</string>
     <string name="title_dialog">DialogFragment</string>
 
     <!-- Basic AlertDialog -->
