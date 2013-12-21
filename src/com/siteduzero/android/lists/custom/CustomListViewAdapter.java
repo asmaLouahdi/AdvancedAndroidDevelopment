@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.siteduzero.android.R;
 
 public class CustomListViewAdapter extends BaseAdapter {
 	private List<Integer> mModel = new ArrayList<Integer>();
@@ -33,19 +37,34 @@ public class CustomListViewAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		CustomListViewView v = null;
-		// Notre vue n'a pas encore été construite, nous le faisons
+		final int item = getItem(position);
+		ViewHolder holder = null;
 		if (convertView == null) {
-			v = new CustomListViewView(mContext);
-		} // Notre vue peut être récupérée, nous le faisons
-		else {
-			v = (CustomListViewView) convertView;
+			// It's the first instantiation, we create our view.
+			convertView = LayoutInflater.from(mContext).inflate(R.layout.view_custom_listview, parent, false);
+			holder = new ViewHolder(convertView);
+			convertView.setTag(holder);
+		} else {
+			// Android is awesome, we can retrieve an older version of our view.
+			holder = (ViewHolder) convertView.getTag();
 		}
-		v.bind(getItem(position));
-		return v;
+		holder.bind(mContext.getResources().getString(item));
+		return convertView;
 	}
 
 	public void bind(List<Integer> model) {
 		mModel = model;
+	}
+
+	private static class ViewHolder {
+		private TextView mTextView;
+
+		public ViewHolder(final View view) {
+			mTextView = (TextView) view.findViewById(R.id.textView);
+		}
+
+		public void bind(String text) {
+			mTextView.setText(text);
+		}
 	}
 }
