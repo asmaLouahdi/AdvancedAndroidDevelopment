@@ -12,8 +12,7 @@ import android.widget.ArrayAdapter;
 
 import com.siteduzero.android.R;
 
-public class CountryListFragment extends ListFragment implements
-		OnItemClickListener {
+public class CountryListFragment extends ListFragment implements OnItemClickListener {
 	private OnCountrySelectedListener mListener = null;
 
 	@Override
@@ -29,8 +28,7 @@ public class CountryListFragment extends ListFragment implements
 			mListener = (OnCountrySelectedListener) activity;
 		} catch (ClassCastException e) {
 			// Unchecked exception.
-			throw new ClassCastException(activity.toString()
-					+ " must implement OnCountrySelectedListener");
+			throw new ClassCastException(activity.toString() + " must implement OnCountrySelectedListener");
 		}
 	}
 
@@ -40,22 +38,20 @@ public class CountryListFragment extends ListFragment implements
 
 		String[] items = getResources().getStringArray(R.array.list_examples);
 
-		ArrayAdapter<String> aa = new ArrayAdapter<String>(getActivity(),
-				android.R.layout.simple_list_item_1, items);
+		ArrayAdapter<String> aa = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, items);
 		setListAdapter(aa);
 
 		getListView().setOnItemClickListener(this);
 	}
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        if (mListener != null) {
+            mListener.onCountrySelected(position);
+        }
+    }
+
 	public interface OnCountrySelectedListener {
 		void onCountrySelected(int position);
-	}
-
-	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int position,
-			long arg3) {
-		if (mListener != null) {
-			mListener.onCountrySelected(position);
-		}
 	}
 }
