@@ -1,14 +1,14 @@
 package com.siteduzero.android.lists.simple;
 
-import com.siteduzero.android.R;
-
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.siteduzero.android.R;
+
 public class SimpleListActivity extends FragmentActivity {
 	@Override
-	protected void onCreate(Bundle arg0) {
-		super.onCreate(arg0);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list_simple);
 	}
 }
