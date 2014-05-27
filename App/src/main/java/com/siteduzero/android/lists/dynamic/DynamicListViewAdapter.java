@@ -1,104 +1,105 @@
 package com.siteduzero.android.lists.dynamic;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.siteduzero.android.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DynamicListViewAdapter extends BaseAdapter {
-	private static final int TYPE_HEADER = 0;
-	private static final int TYPE_BODY = 1;
-	private static final int TYPE_MAX = 2;
-	private List<Integer> mTypes = new ArrayList<Integer>();
-	private DynamicListViewModel mModelHeader = null;
-	private List<Integer> mModelBody = new ArrayList<Integer>();
-	private Context mContext;
+    private final Context mContext;
+    private final List<Object> mModels = new ArrayList<Object>();
 
-	public DynamicListViewAdapter(Context context) {
-		mContext = context;
-	}
+    public DynamicListViewAdapter(Context context) {
+        mContext = context;
+    }
 
-	@Override
-	public int getViewTypeCount() {
-		return TYPE_MAX;
-	}
+    @Override
+    public int getCount() {
+        return mModels.size();
+    }
 
-	@Override
-	public int getItemViewType(int position) {
-		return mTypes.get(position);
-	}
+    @Override
+    public Object getItem(int position) {
+        return mModels.get(position);
+    }
 
-	@Override
-	public int getCount() {
-		if (mModelHeader == null)
-			return mModelBody.size();
-		return 1 + mModelBody.size();
-	}
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 
-	@Override
-	public Object getItem(int position) {
-		int type = getItemViewType(position);
-		return type == TYPE_HEADER ? mModelHeader : mModelBody
-				.get(position - 1);
-	}
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        Object item = getItem(position);
 
-	@Override
-	public long getItemId(int position) {
-		return position;
-	}
+        if (item instanceof DynamicListViewModel) {
+            HeaderViewHolder headerHolder;
+            if (convertView == null) {
+                // It's the first instantiation, we create our view.
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.view_dynamic_header_listview, parent, false);
+                headerHolder = new HeaderViewHolder(convertView);
+                convertView.setTag(headerHolder);
+            } else {
+                // Android is awesome, we can retrieve an older version of our view.
+                headerHolder = (HeaderViewHolder) convertView.getTag();
+            }
 
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		View v = null;
-		int type = getItemViewType(position);
+            DynamicListViewModel headerModel = (DynamicListViewModel) getItem(position);
+            headerHolder.bind(headerModel.getTextRessource(), headerModel.getImageRessource());
+        } else if (item instanceof Integer) {
+            BodyViewHolder bodyHolder;
+            if (convertView == null) {
+                // It's the first instantiation, we create our view.
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.view_dynamic_body_listview, parent, false);
+                bodyHolder = new BodyViewHolder(convertView);
+                convertView.setTag(bodyHolder);
+            } else {
+                // Android is awesome, we can retrieve an older version of our view.
+                bodyHolder = (BodyViewHolder) convertView.getTag();
+            }
+            Integer bodyModel = (Integer) getItem(position);
+            bodyHolder.bind(bodyModel);
+        }
 
-		if (convertView == null) {
-			switch (type) {
-			case TYPE_HEADER:
-				v = new DynamicHeaderListViewView(mContext);
-				break;
-			case TYPE_BODY:
-				v = new DynamicBodyListViewView(mContext);
-				break;
-			}
-		} else {
-			switch (type) {
-			case TYPE_HEADER:
-				v = (DynamicHeaderListViewView) convertView;
-				break;
-			case TYPE_BODY:
-				v = (DynamicBodyListViewView) convertView;
-				break;
-			}
-		}
+        return convertView;
+    }
 
-		switch (type) {
-		case TYPE_HEADER:
-			DynamicListViewModel model1 = (DynamicListViewModel) getItem(position);
-			((DynamicHeaderListViewView) v).bind(model1.getImageRessource(),
-					model1.getTextRessource());
-			break;
-		case TYPE_BODY:
-			Integer model2 = (Integer) getItem(position);
-			((DynamicBodyListViewView) v).bind(model2);
-			break;
-		}
+    public void add(Object model) {
+        mModels.add(model);
+    }
 
-		return v;
-	}
+    private static class HeaderViewHolder {
+        private ImageView mImageView;
+        private TextView mTextView;
 
-	public void bindHeader(DynamicListViewModel model) {
-		mModelHeader = model;
-		mTypes.add(TYPE_HEADER);
-	}
+        public HeaderViewHolder(final View view) {
+            mImageView = (ImageView) view.findViewById(R.id.imageViewAvatar);
+            mTextView = (TextView) view.findViewById(R.id.textView);
+        }
 
-	public void bindBody(List<Integer> model) {
-		mModelBody = model;
-		for (int i = 0; i < model.size(); i++) {
-			mTypes.add(TYPE_BODY);
-		}
-	}
+        public void bind(int text, int image) {
+            mImageView.setImageResource(image);
+            mTextView.setText(text);
+        }
+    }
+
+    private static class BodyViewHolder {
+        private TextView mTextView;
+
+        public BodyViewHolder(final View view) {
+            mTextView = (TextView) view.findViewById(R.id.textView);
+        }
+
+        public void bind(int text) {
+            mTextView.setText(text);
+        }
+    }
 }

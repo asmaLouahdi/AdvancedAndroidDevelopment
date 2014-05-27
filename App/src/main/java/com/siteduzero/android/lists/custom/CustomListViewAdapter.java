@@ -38,7 +38,7 @@ public class CustomListViewAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		final int item = getItem(position);
-		ViewHolder holder = null;
+		ViewHolder holder;
 		if (convertView == null) {
 			// It's the first instantiation, we create our view.
 			convertView = LayoutInflater.from(mContext).inflate(R.layout.view_custom_listview, parent, false);
