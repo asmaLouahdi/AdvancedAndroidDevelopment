@@ -1,0 +1,28 @@
+apply plugin: 'android'
+
+dependencies {
+    compile 'com.android.support:support-v4:19.1.+'
+    compile 'com.google.android.gms:play-services:4.4.52'
+    compile 'org.roboguice:roboguice:3.0-alpha-SNAPSHOT'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+}
+
+android {
+    compileSdkVersion Integer.valueOf(sdkversion)
+    buildToolsVersion buildtoolsversion
+    compileOptions.encoding = "UTF-8"
+
+    defaultConfig {
+        minSdkVersion Integer.valueOf(minsdkversion)
+        targetSdkVersion Integer.valueOf(sdkversion)
+        versionCode Integer.valueOf(versioncode)
+        versionName version
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}

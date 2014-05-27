@@ -1,11 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.siteduzero.android"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="18" />
+    package="com.siteduzero.android">
 
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,12 +14,16 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <!-- Launcher -->
         <activity
             android:name=".samples.SamplesListActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,7 +54,7 @@
             android:label="@string/title_fragment_settings" />
         <activity
             android:name=".settings.SettingsActivity"
-            android:label="@string/title_fragment_settings" >
+            android:label="@string/title_fragment_settings">
 
             <!-- This intent filter indicates to the system that this is the activity that controls data usage of your application. -->
             <intent-filter>
@@ -100,7 +98,7 @@
         <activity
             android:name=".nfc.NFCActivity"
             android:exported="false"
-            android:label="@string/title_nfc_normal" >
+            android:label="@string/title_nfc_normal">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
@@ -110,7 +108,7 @@
         <activity
             android:name=".nfc.NFCBeamActivity"
             android:exported="false"
-            android:label="@string/title_nfc_beam" >
+            android:label="@string/title_nfc_beam">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
 
