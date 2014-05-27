@@ -1,8 +1,5 @@
 package com.siteduzero.android.lists.custom;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.siteduzero.android.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CustomListViewAdapter extends BaseAdapter {
 	private List<Integer> mModel = new ArrayList<Integer>();
@@ -48,7 +48,7 @@ public class CustomListViewAdapter extends BaseAdapter {
 			// Android is awesome, we can retrieve an older version of our view.
 			holder = (ViewHolder) convertView.getTag();
 		}
-		holder.bind(mContext.getResources().getString(item));
+		holder.bind(item);
 		return convertView;
 	}
 
@@ -63,7 +63,7 @@ public class CustomListViewAdapter extends BaseAdapter {
 			mTextView = (TextView) view.findViewById(R.id.textView);
 		}
 
-		public void bind(String text) {
+		public void bind(int text) {
 			mTextView.setText(text);
 		}
 	}

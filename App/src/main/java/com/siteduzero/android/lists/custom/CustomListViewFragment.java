@@ -1,8 +1,5 @@
 package com.siteduzero.android.lists.custom;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -11,12 +8,14 @@ import android.view.ViewGroup;
 
 import com.siteduzero.android.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CustomListViewFragment extends ListFragment {
 	public static final String TAG = "CustomListViewFragment";
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.fragment_listview, container, false);
 	}
 
