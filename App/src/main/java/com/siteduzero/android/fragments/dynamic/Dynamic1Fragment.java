@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 import com.siteduzero.android.R;
 
 public class Dynamic1Fragment extends Fragment {
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.fragment_dynamic_1, container, false);
-	}
+    public static final String TAG = "Dynamic1Fragment";
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_dynamic_1, container, false);
+    }
 }

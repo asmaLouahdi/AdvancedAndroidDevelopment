@@ -10,68 +10,65 @@ import android.view.View;
 import com.siteduzero.android.R;
 
 public class DynamicActivity extends FragmentActivity {
-	private static final String KEY_FRAGMENT = "fragment_save";
+    private static final String KEY_FRAGMENT = "fragment_save";
 
-	private String mFragment;
-	// We instantiate just one time fragments during the live of the activity.
-	private final Dynamic1Fragment mDynamic1Fragment = new Dynamic1Fragment();
-	private final Dynamic2Fragment mDynamic2Fragment = new Dynamic2Fragment();
+    private String mCurrentFragment;
+    // We instantiate just one time fragments during the live of the activity.
+    private final Dynamic1Fragment mDynamic1Fragment = new Dynamic1Fragment();
+    private final Dynamic2Fragment mDynamic2Fragment = new Dynamic2Fragment();
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_fragment_dynamic);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fragment_dynamic);
 
-		if (savedInstanceState != null)
-			mFragment = savedInstanceState.getString(KEY_FRAGMENT);
-		else
-			mFragment = getIntent().getStringExtra(KEY_FRAGMENT);
+        // Retrieve the fragment saved or we display a default fragment.
+        if (savedInstanceState != null) {
+            mCurrentFragment = savedInstanceState.getString(KEY_FRAGMENT);
+        } else {
+            mCurrentFragment = Dynamic1Fragment.TAG;
+        }
 
-		if (mFragment != null) {
-			if (mFragment.equals(mDynamic1Fragment.getClass().getSimpleName())) {
-				showFragment(this.mDynamic1Fragment);
-			} else if (mFragment.equals(mDynamic2Fragment.getClass()
-					.getSimpleName())) {
-				showFragment(this.mDynamic2Fragment);
-			}
-		} else {
-			showFragment(this.mDynamic1Fragment);
-		}
-	}
+        // Display the current fragment.
+        if (Dynamic1Fragment.TAG.equals(mCurrentFragment)) {
+            showFragment(this.mDynamic1Fragment, Dynamic1Fragment.TAG);
+        } else if (Dynamic2Fragment.TAG.equals(mCurrentFragment)) {
+            showFragment(this.mDynamic2Fragment, Dynamic2Fragment.TAG);
+        }
+    }
 
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		outState.putString(KEY_FRAGMENT, mFragment != null ? mFragment : "");
-		super.onSaveInstanceState(outState);
-	}
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString(KEY_FRAGMENT, mCurrentFragment != null ? mCurrentFragment : "");
+        super.onSaveInstanceState(outState);
+    }
 
-	private void showFragment(final Fragment fragment) {
-		if (fragment == null)
-			return;
+    private void showFragment(final Fragment fragment, String tag) {
+        if (fragment == null) {
+            return;
+        }
 
-		// Update current fragment.
-		mFragment = fragment.getClass().getSimpleName();
-		// Begin a fragment transaction.
-		final FragmentManager fm = getSupportFragmentManager();
-		final FragmentTransaction ft = fm.beginTransaction();
-		// We can also animate the changing of fragment.
-		ft.setCustomAnimations(android.R.anim.slide_in_left,
-				android.R.anim.slide_out_right);
-		// Replace current fragment by the new one.
-		ft.replace(R.id.frameLayoutListView, fragment);
-		// Null on the back stack to return on the previous fragment when user
-		// press on back button.
-		ft.addToBackStack(null);
+        // Update current fragment.
+        mCurrentFragment = tag;
+        // Begin a fragment transaction.
+        final FragmentManager fm = getSupportFragmentManager();
+        final FragmentTransaction ft = fm.beginTransaction();
+        // We can also animate the changing of fragment.
+        ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+        // Replace current fragment by the new one.
+        ft.replace(R.id.frameLayoutListView, fragment);
+        // Null on the back stack to return on the previous fragment when user press on back button.
+        ft.addToBackStack(null);
 
-		// Commit changes.
-		ft.commit();
-	}
+        // Commit changes.
+        ft.commit();
+    }
 
-	public void goToFragment1(View v) {
-		showFragment(this.mDynamic1Fragment);
-	}
+    public void goToFragment1(View v) {
+        showFragment(this.mDynamic1Fragment, Dynamic1Fragment.TAG);
+    }
 
-	public void goToFragment2(View v) {
-		showFragment(this.mDynamic2Fragment);
-	}
+    public void goToFragment2(View v) {
+        showFragment(this.mDynamic2Fragment, Dynamic2Fragment.TAG);
+    }
 }
