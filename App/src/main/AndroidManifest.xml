@@ -78,9 +78,11 @@
         </activity>
         <activity
             android:name="com.siteduzero.android.actionbar.ActionBarContextualActivity"
+            android:theme="@style/AppThemeActionBar"
             android:label="@string/title_actionbar_contextual" />
         <activity
             android:name="com.siteduzero.android.actionbar.ActionBarContextualListActivity"
+            android:theme="@style/AppThemeActionBar"
             android:label="@string/title_actionbar_contextual_list" />
         <activity
             android:name="com.siteduzero.android.navigation.drawer.DrawerLayoutActivity"
