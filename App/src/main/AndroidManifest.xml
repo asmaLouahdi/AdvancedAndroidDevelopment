@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.siteduzero.android">
 
@@ -15,14 +16,13 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
         <!-- Launcher -->
         <activity
-            android:name=".samples.SamplesListActivity"
+            android:name="com.siteduzero.android.samples.SamplesListActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,25 +32,25 @@
         </activity>
         <!-- Part 1 -->
         <activity
-            android:name=".fragments.fixe.FixeActivity"
+            android:name="com.siteduzero.android.fragments.fixe.FixeActivity"
             android:label="@string/title_fragment_fixe" />
         <activity
-            android:name=".fragments.dynamic.DynamicActivity"
+            android:name="com.siteduzero.android.fragments.dynamic.DynamicActivity"
             android:label="@string/title_fragment_dynamic" />
         <activity
-            android:name=".lists.simple.SimpleListActivity"
+            android:name="com.siteduzero.android.lists.simple.SimpleListActivity"
             android:label="@string/title_listfragment_simple" />
         <activity
-            android:name=".lists.custom.CustomListActivity"
+            android:name="com.siteduzero.android.lists.custom.CustomListActivity"
             android:label="@string/title_listfragment_custom" />
         <activity
-            android:name=".lists.dynamic.DynamicListActivity"
+            android:name="com.siteduzero.android.lists.dynamic.DynamicListActivity"
             android:label="@string/title_listfragment_dynamic" />
         <activity
-            android:name=".dynamicui.DynamicUIActivity"
+            android:name="com.siteduzero.android.dynamicui.DynamicUIActivity"
             android:label="@string/title_dynamic_ui" />
         <activity
-            android:name=".settings.UsingSettingsActivity"
+            android:name="com.siteduzero.android.settings.UsingSettingsActivity"
             android:label="@string/title_fragment_settings" />
         <activity
             android:name=".settings.SettingsActivity"
@@ -64,39 +64,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".dialog.DialogActivity"
+            android:name="com.siteduzero.android.dialog.DialogActivity"
             android:label="@string/title_fragment_dialog" />
         <!-- Part 2 -->
         <activity
-            android:name=".actionbar.ActionBarSimpleActivity"
+            android:name="com.siteduzero.android.actionbar.ActionBarSimpleActivity"
+            android:theme="@style/AppThemeActionBar"
             android:label="@string/title_actionbar_simple"
-            android:uiOptions="splitActionBarWhenNarrow" />
+            android:uiOptions="splitActionBarWhenNarrow">
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
         <activity
-            android:name=".actionbar.ActionBarContextualActivity"
+            android:name="com.siteduzero.android.actionbar.ActionBarContextualActivity"
             android:label="@string/title_actionbar_contextual" />
         <activity
-            android:name=".actionbar.ActionBarContextualListActivity"
+            android:name="com.siteduzero.android.actionbar.ActionBarContextualListActivity"
             android:label="@string/title_actionbar_contextual_list" />
         <activity
-            android:name=".navigation.drawer.DrawerLayoutActivity"
+            android:name="com.siteduzero.android.navigation.drawer.DrawerLayoutActivity"
             android:label="@string/title_drawer" />
         <activity
-            android:name=".navigation.slidingpane.SlidingPaneLayoutActivity"
+            android:name="com.siteduzero.android.navigation.slidingpane.SlidingPaneLayoutActivity"
             android:label="@string/title_sliding_pane" />
         <activity
-            android:name=".navigation.viewpager.ViewPagerActivity"
+            android:name="com.siteduzero.android.navigation.viewpager.ViewPagerActivity"
             android:label="@string/title_viewpager" />
         <activity
-            android:name=".multiscreens.MultiScreensActivity"
+            android:name="com.siteduzero.android.multiscreens.MultiScreensActivity"
             android:label="@string/title_multiple_screens" />
         <activity
-            android:name=".notifications.NotificationsActivity"
+            android:name="com.siteduzero.android.notifications.NotificationsActivity"
             android:label="@string/title_notifications" />
         <activity
-            android:name=".nfc.NFCEmulatorActivity"
+            android:name="com.siteduzero.android.nfc.NFCEmulatorActivity"
             android:label="@string/title_nfc_emulator" />
         <activity
-            android:name=".nfc.NFCActivity"
+            android:name="com.siteduzero.android.nfc.NFCActivity"
             android:exported="false"
             android:label="@string/title_nfc_normal">
             <intent-filter>
@@ -106,7 +111,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".nfc.NFCBeamActivity"
+            android:name="com.siteduzero.android.nfc.NFCBeamActivity"
             android:exported="false"
             android:label="@string/title_nfc_beam">
             <intent-filter>
@@ -126,13 +131,13 @@
             android:label="@string/title_request_auth" />
         <!-- Part 4 -->
         <activity
-            android:name=".services.auth.ServiceAuthorizationListActivity"
+            android:name="com.siteduzero.android.services.auth.ServiceAuthorizationListActivity"
             android:label="@string/title_services_authorization" />
         <activity
-            android:name=".services.auth.ServiceAuthorizationActivity"
+            android:name="com.siteduzero.android.services.auth.ServiceAuthorizationActivity"
             android:label="@string/title_services_authorization" />
         <activity
-            android:name=".services.plus.SignInActivity"
+            android:name="com.siteduzero.android.services.plus.SignInActivity"
             android:label="@string/title_services_sign_in" />
     </application>
 

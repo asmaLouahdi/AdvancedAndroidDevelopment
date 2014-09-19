@@ -1,7 +1,9 @@
 package com.siteduzero.android.settings;
 
+import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -9,8 +11,8 @@ import android.preference.PreferenceManager;
 
 import com.siteduzero.android.R;
 
-public class SettingsFragment extends PreferenceFragment implements
-		OnSharedPreferenceChangeListener {
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+public class SettingsFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {
 	private static final String KEY_SETTINGS = "settings";
 	private static final String HEADER_EDIT = "header_edit";
 	private static final String HEADER_AGENDA = "header_agenda";

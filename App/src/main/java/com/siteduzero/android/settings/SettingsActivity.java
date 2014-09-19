@@ -1,12 +1,13 @@
 package com.siteduzero.android.settings;
 
-import java.util.List;
-
+import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
 import com.siteduzero.android.R;
+
+import java.util.List;
 
 public class SettingsActivity extends PreferenceActivity {
 	private static final String ACTION_PREF_EDIT = "com.siteduzero.android.settings.EDIT";
@@ -31,8 +32,17 @@ public class SettingsActivity extends PreferenceActivity {
 	}
 
 	// This methods is called with Android 3.0 and higher.
-	@Override
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @Override
 	public void onBuildHeaders(List<Header> target) {
 		loadHeadersFromResource(R.xml.settings_headers, target);
 	}
+
+    @Override
+    protected boolean isValidFragment(String fragmentName) {
+        if (SettingsFragment.class.getName().equals(fragmentName)) {
+            return true;
+        }
+        return false;
+    }
 }
