@@ -37,7 +37,7 @@
 
     <!-- Menus -->
     <string name="menu_github">Project on Github</string>
-    <string name="menu_sdz">Tutorial on SdZ</string>
+    <string name="menu_zds">Tutorial on ZdS</string>
     <string name="menu_randoomz">Tutorial on Randoomz</string>
     <string name="menu_add">Add</string>
     <string name="menu_crop">Crop</string>

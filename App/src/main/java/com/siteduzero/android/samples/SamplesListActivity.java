@@ -28,8 +28,8 @@ public class SamplesListActivity extends FragmentActivity {
 		case R.id.menu_github:
 			goToSourceCodes();
 			return true;
-		case R.id.menu_sdz:
-			goToSdZ();
+		case R.id.menu_zds:
+			goToZdS();
 			return true;
 		case R.id.menu_randoomz:
 			goToRandoomz();
@@ -38,10 +38,10 @@ public class SamplesListActivity extends FragmentActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	private void goToSdZ() {
+	private void goToZdS() {
 		Intent i = new Intent(
 				Intent.ACTION_VIEW,
-				Uri.parse("http://www.siteduzero.com/tutoriel-3-746284-aller-plus-loin-dans-le-developpement-android.html"));
+				Uri.parse("http://zestedesavoir.com/tutoriels/278/aller-plus-loin-dans-le-developpement-android/"));
 		startActivity(i);
 	}
 

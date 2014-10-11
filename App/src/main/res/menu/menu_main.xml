@@ -7,10 +7,10 @@
         android:showAsAction="ifRoom"
         android:title="@string/menu_randoomz"/>
     <item
-        android:id="@+id/menu_sdz"
-        android:icon="@drawable/ic_action_sdz"
+        android:id="@+id/menu_zds"
+        android:icon="@drawable/ic_action_zds"
         android:showAsAction="ifRoom"
-        android:title="@string/menu_sdz"/>
+        android:title="@string/menu_zds"/>
     <item
         android:id="@+id/menu_github"
         android:icon="@drawable/ic_action_github"
