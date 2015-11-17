@@ -1,29 +1,25 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile 'com.android.support:support-v4:20.0.0'
-    compile 'com.android.support:appcompat-v7:20.0.0'
-    compile 'com.google.android.gms:play-services:4.4.52'
-    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+  compile 'com.android.support:support-v4:23.1.1'
 }
 
 
 android {
-    compileSdkVersion Integer.valueOf(sdkversion)
-    buildToolsVersion buildtoolsversion
-    compileOptions.encoding = "UTF-8"
+  compileSdkVersion 23
+  buildToolsVersion "23.0.2"
 
-    defaultConfig {
-        minSdkVersion Integer.valueOf(minsdkversion)
-        targetSdkVersion Integer.valueOf(sdkversion)
-        versionCode Integer.valueOf(versioncode)
-        versionName version
+  defaultConfig {
+    applicationId "com.siteduzero.android"
+    minSdkVersion 11
+    targetSdkVersion 23
+    versionCode 1
+    versionName "2.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-
-    buildTypes {
-        release {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
-    }
+  }
 }

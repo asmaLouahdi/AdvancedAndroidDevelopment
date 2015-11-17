@@ -2,14 +2,12 @@ package com.siteduzero.android.samples;
 
 public class SamplesItem {
 	private final int mTitle;
-	private final int mPart;
 	private final int mChapter;
 	private final Class<?> mActivityToStart;
 
-	public SamplesItem(int title, int part, int chapter, Class<?> activityToStart) {
+	public SamplesItem(int title, int chapter, Class<?> activityToStart) {
 		super();
 		this.mTitle = title;
-		this.mPart = part;
 		this.mChapter = chapter;
 		this.mActivityToStart = activityToStart;
 	}
@@ -18,10 +16,6 @@ public class SamplesItem {
 		return mTitle;
 	}
 	
-	public int getPart() {
-		return mPart;
-	}
-
 	public int getChapter() {
 		return mChapter;
 	}

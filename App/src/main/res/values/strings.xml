@@ -2,39 +2,6 @@
 
     <string name="app_name">Android development</string>
 
-    <!-- Actionbar -->
-    <string name="btn_contextual">Contextual menu</string>
-    <string name="toast_home">Return home</string>
-    <string name="toast_add">Add something</string>
-    <string name="toast_save">Save something</string>
-    <string name="toast_search_submit">Submit search</string>
-    <string name="toast_crop">Crop something</string>
-    <string name="toast_trash">Trash something</string>
-
-    <!-- ViewPager -->
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-
-    <!-- Notifications -->
-    <string name="notification_action_1">Do an action</string>
-    <string name="notification_action_2">Another action</string>
-    <string name="btn_basic">Basic</string>
-    <string name="btn_big_text">Big text</string>
-    <string name="btn_big_pic">Big picture</string>
-    <string name="btn_btn_inbox">Complexe</string>
-    <string name="basic_title">Basic Notification</string>
-    <string name="basic_text">This notification is basic.</string>
-    <string name="big_text_title">Big text Notification</string>
-    <string name="big_text">This is a bit text. I like chocolate and candy because there are a lot of sugar.</string>
-    <string name="big_pic_title">Big picture Notification</string>
-    <string name="inbox_title">Inbox Notification</string>
-
-    <!-- Nfc -->
-    <string name="btn_nfc">Send a tag</string>
-    <string name="text_nfc">Text for NFC</string>
-    <string name="text_no_nfc">You didn\'t have NFC!</string>
-
     <!-- Menus -->
     <string name="menu_github">Project on Github</string>
     <string name="menu_zds">Tutorial on ZdS</string>
@@ -47,22 +14,6 @@
     <string name="menu_share">Share</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_trash">Trash</string>
-
-    <!-- Network requests -->
-    <string name="request_login">Login</string>
-    <string name="request_plus_connect">Google Plus Connect</string>
-    <string name="request_twitter_connect">Twitter Connect</string>
-    <string name="request_register_email">Email</string>
-    <string name="request_register_confirm_pass">Confirm password</string>
-    <string name="request_register_password">Password</string>
-    <string name="request_register">Register</string>
-    <string name="request_section_login">LOGIN</string>
-    <string name="request_section_register">REGISTER</string>
-
-    <!-- Network security -->
-    <string name="security_error_field_required">A value required.</string>
-    <string name="security_invalid_email">Invalid email</string>
-    <string name="security_invalid_password">Invalid password. 6 caracters min.</string>
 
     <!-- Other -->
     <string name="drawer_open">Open navigation drawer</string>

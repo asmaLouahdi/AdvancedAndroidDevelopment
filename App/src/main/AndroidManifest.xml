@@ -1,146 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.siteduzero.android">
+<manifest package="com.siteduzero.android"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.NFC" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <application
+    android:allowBackup="true"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/app_name"
+    android:theme="@style/AppTheme">
 
-    <uses-feature
-        android:name="android.hardware.nfc"
-        android:required="false" />
+    <!-- Launcher -->
+    <activity
+      android:name="com.siteduzero.android.samples.SamplesListActivity"
+      android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <!-- Part 1 -->
+    <activity
+      android:name="com.siteduzero.android.fragments.fixe.FixeActivity"
+      android:label="@string/title_fragment_fixe"/>
+    <activity
+      android:name="com.siteduzero.android.fragments.dynamic.DynamicActivity"
+      android:label="@string/title_fragment_dynamic"/>
+    <activity
+      android:name="com.siteduzero.android.lists.simple.SimpleListActivity"
+      android:label="@string/title_listfragment_simple"/>
+    <activity
+      android:name="com.siteduzero.android.lists.custom.CustomListActivity"
+      android:label="@string/title_listfragment_custom"/>
+    <activity
+      android:name="com.siteduzero.android.lists.dynamic.DynamicListActivity"
+      android:label="@string/title_listfragment_dynamic"/>
+    <activity
+      android:name="com.siteduzero.android.dynamicui.DynamicUIActivity"
+      android:label="@string/title_dynamic_ui"/>
+    <activity
+      android:name="com.siteduzero.android.settings.UsingSettingsActivity"
+      android:label="@string/title_fragment_settings"/>
+    <activity
+      android:name=".settings.SettingsActivity"
+      android:label="@string/title_fragment_settings">
 
-        <!-- Launcher -->
-        <activity
-            android:name="com.siteduzero.android.samples.SamplesListActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+      <!-- This intent filter indicates to the system that this is the activity that controls data usage of your application. -->
+      <intent-filter>
+        <action android:name="android.intent.action.MANAGE_NETWORK_USAGE"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!-- Part 1 -->
-        <activity
-            android:name="com.siteduzero.android.fragments.fixe.FixeActivity"
-            android:label="@string/title_fragment_fixe" />
-        <activity
-            android:name="com.siteduzero.android.fragments.dynamic.DynamicActivity"
-            android:label="@string/title_fragment_dynamic" />
-        <activity
-            android:name="com.siteduzero.android.lists.simple.SimpleListActivity"
-            android:label="@string/title_listfragment_simple" />
-        <activity
-            android:name="com.siteduzero.android.lists.custom.CustomListActivity"
-            android:label="@string/title_listfragment_custom" />
-        <activity
-            android:name="com.siteduzero.android.lists.dynamic.DynamicListActivity"
-            android:label="@string/title_listfragment_dynamic" />
-        <activity
-            android:name="com.siteduzero.android.dynamicui.DynamicUIActivity"
-            android:label="@string/title_dynamic_ui" />
-        <activity
-            android:name="com.siteduzero.android.settings.UsingSettingsActivity"
-            android:label="@string/title_fragment_settings" />
-        <activity
-            android:name=".settings.SettingsActivity"
-            android:label="@string/title_fragment_settings">
-
-            <!-- This intent filter indicates to the system that this is the activity that controls data usage of your application. -->
-            <intent-filter>
-                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.siteduzero.android.dialog.DialogActivity"
-            android:label="@string/title_fragment_dialog" />
-        <!-- Part 2 -->
-        <activity
-            android:name="com.siteduzero.android.actionbar.ActionBarSimpleActivity"
-            android:theme="@style/AppThemeActionBar"
-            android:label="@string/title_actionbar_simple"
-            android:uiOptions="splitActionBarWhenNarrow">
-            <meta-data
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWhenNarrow" />
-        </activity>
-        <activity
-            android:name="com.siteduzero.android.actionbar.ActionBarContextualActivity"
-            android:theme="@style/AppThemeActionBar"
-            android:label="@string/title_actionbar_contextual" />
-        <activity
-            android:name="com.siteduzero.android.actionbar.ActionBarContextualListActivity"
-            android:theme="@style/AppThemeActionBar"
-            android:label="@string/title_actionbar_contextual_list" />
-        <activity
-            android:name="com.siteduzero.android.navigation.drawer.DrawerLayoutActivity"
-            android:label="@string/title_drawer" />
-        <activity
-            android:name="com.siteduzero.android.navigation.slidingpane.SlidingPaneLayoutActivity"
-            android:label="@string/title_sliding_pane" />
-        <activity
-            android:name="com.siteduzero.android.navigation.viewpager.ViewPagerActivity"
-            android:label="@string/title_viewpager" />
-        <activity
-            android:name="com.siteduzero.android.multiscreens.MultiScreensActivity"
-            android:label="@string/title_multiple_screens" />
-        <activity
-            android:name="com.siteduzero.android.notifications.NotificationsActivity"
-            android:label="@string/title_notifications" />
-        <activity
-            android:name="com.siteduzero.android.nfc.NFCEmulatorActivity"
-            android:label="@string/title_nfc_emulator" />
-        <activity
-            android:name="com.siteduzero.android.nfc.NFCActivity"
-            android:exported="false"
-            android:label="@string/title_nfc_normal">
-            <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.siteduzero.android.nfc.NFCBeamActivity"
-            android:exported="false"
-            android:label="@string/title_nfc_beam">
-            <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="application/com.siteduzero.android.nfc" />
-            </intent-filter>
-        </activity>
-        <!-- Part 3 -->
-        <activity
-            android:name="com.siteduzero.android.requests.products.PHPRequestActivity"
-            android:label="@string/title_remote_data" />
-        <activity
-            android:name="com.siteduzero.android.requests.security.AuthenticationActivity"
-            android:label="@string/title_request_auth" />
-        <!-- Part 4 -->
-        <activity
-            android:name="com.siteduzero.android.services.auth.ServiceAuthorizationListActivity"
-            android:label="@string/title_services_authorization" />
-        <activity
-            android:name="com.siteduzero.android.services.auth.ServiceAuthorizationActivity"
-            android:label="@string/title_services_authorization" />
-        <activity
-            android:name="com.siteduzero.android.services.plus.SignInActivity"
-            android:label="@string/title_services_sign_in" />
-    </application>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <activity
+      android:name="com.siteduzero.android.dialog.DialogActivity"
+      android:label="@string/title_fragment_dialog"/>
+  </application>
 
 </manifest>

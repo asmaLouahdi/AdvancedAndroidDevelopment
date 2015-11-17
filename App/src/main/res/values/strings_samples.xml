@@ -11,21 +11,6 @@
     <string name="title_dynamic_ui">Dynamic UI</string>
     <string name="title_fragment_settings">PreferenceFragment</string>
     <string name="title_fragment_dialog">Dialog</string>
-    <string name="title_actionbar_simple">Actionbar</string>
-    <string name="title_actionbar_contextual">Actionbar contextual</string>
-    <string name="title_actionbar_contextual_list">Actionbar contextual with list</string>
-    <string name="title_viewpager">ViewPager</string>
-    <string name="title_sliding_pane">Sliding Pane Layout</string>
-    <string name="title_drawer">Drawer Layout</string>
-    <string name="title_multiple_screens">Multiple screens</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_nfc_emulator">NFC Emulator</string>
-    <string name="title_nfc_normal">NFC Normal</string>
-    <string name="title_nfc_beam">NFC Beam</string>
-    <string name="title_remote_data">Retrieve remote data</string>
-    <string name="title_request_auth">Authentication</string>
-    <string name="title_services_authorization">Service Authorization</string>
-    <string name="title_services_sign_in">Sign In with Google Plus</string>
 
     <!-- Parts -->
     <string name="no_part">No part</string>

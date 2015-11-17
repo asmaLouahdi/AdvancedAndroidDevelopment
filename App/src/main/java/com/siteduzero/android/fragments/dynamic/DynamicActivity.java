@@ -31,9 +31,9 @@ public class DynamicActivity extends FragmentActivity {
 
         // Display the current fragment.
         if (Dynamic1Fragment.TAG.equals(mCurrentFragment)) {
-            showFragment(this.mDynamic1Fragment, Dynamic1Fragment.TAG);
+            showFragment(this.mDynamic1Fragment, Dynamic1Fragment.TAG, false);
         } else if (Dynamic2Fragment.TAG.equals(mCurrentFragment)) {
-            showFragment(this.mDynamic2Fragment, Dynamic2Fragment.TAG);
+            showFragment(this.mDynamic2Fragment, Dynamic2Fragment.TAG, false);
         }
     }
 
@@ -43,7 +43,7 @@ public class DynamicActivity extends FragmentActivity {
         super.onSaveInstanceState(outState);
     }
 
-    private void showFragment(final Fragment fragment, String tag) {
+    private void showFragment(final Fragment fragment, String tag, boolean backStack) {
         if (fragment == null) {
             return;
         }
@@ -57,18 +57,20 @@ public class DynamicActivity extends FragmentActivity {
         ft.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         // Replace current fragment by the new one.
         ft.replace(R.id.frameLayoutListView, fragment);
-        // Null on the back stack to return on the previous fragment when user press on back button.
-        ft.addToBackStack(null);
+        if (backStack) {
+            // Null on the back stack to return on the previous fragment when user press on back button.
+            ft.addToBackStack(null);
+        }
 
         // Commit changes.
         ft.commit();
     }
 
     public void goToFragment1(View v) {
-        showFragment(this.mDynamic1Fragment, Dynamic1Fragment.TAG);
+        showFragment(this.mDynamic1Fragment, Dynamic1Fragment.TAG, true);
     }
 
     public void goToFragment2(View v) {
-        showFragment(this.mDynamic2Fragment, Dynamic2Fragment.TAG);
+        showFragment(this.mDynamic2Fragment, Dynamic2Fragment.TAG, true);
     }
 }

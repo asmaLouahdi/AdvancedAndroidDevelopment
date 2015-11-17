@@ -31,9 +31,6 @@ public class SamplesListActivity extends FragmentActivity {
 		case R.id.menu_zds:
 			goToZdS();
 			return true;
-		case R.id.menu_randoomz:
-			goToRandoomz();
-			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -41,7 +38,7 @@ public class SamplesListActivity extends FragmentActivity {
 	private void goToZdS() {
 		Intent i = new Intent(
 				Intent.ACTION_VIEW,
-				Uri.parse("http://zestedesavoir.com/tutoriels/278/aller-plus-loin-dans-le-developpement-android/"));
+				Uri.parse("https://zestedesavoir.com/tutoriels/609/aller-plus-loin-dans-le-developpement-android-1/"));
 		startActivity(i);
 	}
 
@@ -49,13 +46,6 @@ public class SamplesListActivity extends FragmentActivity {
 		Intent i = new Intent(
 				Intent.ACTION_VIEW,
 				Uri.parse("https://github.com/AndroWiiid/AdvancedAndroidDevelopment"));
-		startActivity(i);
-	}
-
-	private void goToRandoomz() {
-		Intent i = new Intent(
-				Intent.ACTION_VIEW,
-				Uri.parse("http://www.randoomz.org/category/programmation/tutoriels-android/"));
 		startActivity(i);
 	}
 }

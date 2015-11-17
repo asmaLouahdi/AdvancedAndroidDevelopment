@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="15dp">
+
+  <TextView
+    android:id="@+id/textViewTitle"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="15dp" >
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:text="@string/title_fragment_fixe"/>
 
-    <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="@string/title_fragment_fixe" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/textViewPart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/part_1"
-            android:paddingRight="10dp" />
-
-        <TextView
-            android:id="@+id/textViewChapter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/chapter_1" />
-    </LinearLayout>
+  <TextView
+    android:id="@+id/textViewChapter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:text="@string/chapter_1"/>
 
 </RelativeLayout>

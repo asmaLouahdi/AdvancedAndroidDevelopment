@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/menu_randoomz"
-        android:icon="@drawable/ic_action_randoomz"
-        android:showAsAction="ifRoom"
-        android:title="@string/menu_randoomz"/>
-    <item
-        android:id="@+id/menu_zds"
-        android:icon="@drawable/ic_action_zds"
-        android:showAsAction="ifRoom"
-        android:title="@string/menu_zds"/>
-    <item
-        android:id="@+id/menu_github"
-        android:icon="@drawable/ic_action_github"
-        android:showAsAction="ifRoom"
-        android:title="@string/menu_github"/>
+  <item
+    android:id="@+id/menu_zds"
+    android:icon="@drawable/ic_action_zds"
+    android:title="@string/menu_zds"
+    android:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/menu_github"
+    android:icon="@drawable/ic_action_github"
+    android:title="@string/menu_github"
+    android:showAsAction="ifRoom"/>
 
 </menu>

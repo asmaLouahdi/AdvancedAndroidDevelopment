@@ -1,7 +1,11 @@
-# Go further in Android development #
-Source codes of big tutorial on the "OpenClassrooms" website about Android development.<br />
+# Go further in Android development
 
-# License #
+A sample Android app which is used by the french tutorial "[Aller plus loin dans le développement Android](https://zestedesavoir.com/tutoriels/609/aller-plus-loin-dans-le-developpement-android-1/)"
+hosted on Zeste de Savoir.
+
+Today, `Fragment` is used in all serious applications. With these samples, you'll see how you can use this advanced concept in several cases with its best practices.
+
+# License
 <pre>
 Copyright 2013 Gérard Paligot
 

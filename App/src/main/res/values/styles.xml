@@ -1,25 +1,5 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="android:Theme.Light" />
-
-    <style name="AppThemeActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:spinnerDropDownItemStyle">@style/AppThemeActionBar.DropDown.Spinner
-        </item>
-    </style>
-
-    <style name="AppThemeActionBar.DropDown.Spinner" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
-        <item name="android:textAppearance">@style/AppThemeActionBar.Widget</item>
-    </style>
-
-    <style name="AppThemeActionBar.Widget" parent="@android:style/Widget">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="title_multiple_screens">
-        <item name="android:textColor">#999999</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+  <style name="AppTheme" parent="android:Theme.Light"/>
 
 </resources>
