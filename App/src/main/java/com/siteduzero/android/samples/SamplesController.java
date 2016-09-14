@@ -1,14 +1,14 @@
 package com.siteduzero.android.samples;
 
 import com.siteduzero.android.R;
-import com.siteduzero.android.dialog.DialogActivity;
-import com.siteduzero.android.dynamicui.DynamicUIActivity;
-import com.siteduzero.android.fragments.dynamic.DynamicActivity;
-import com.siteduzero.android.fragments.fixe.FixeActivity;
-import com.siteduzero.android.lists.custom.CustomListActivity;
-import com.siteduzero.android.lists.dynamic.DynamicListActivity;
-import com.siteduzero.android.lists.simple.SimpleListActivity;
-import com.siteduzero.android.settings.UsingSettingsActivity;
+import com.siteduzero.android.fragments.dialog.DialogActivity;
+import com.siteduzero.android.fragments.dynamicui.DynamicUIActivity;
+import com.siteduzero.android.fragments.fragments.dynamic.DynamicActivity;
+import com.siteduzero.android.fragments.fragments.fixe.FixeActivity;
+import com.siteduzero.android.fragments.lists.custom.CustomListActivity;
+import com.siteduzero.android.fragments.lists.dynamic.DynamicListActivity;
+import com.siteduzero.android.fragments.lists.simple.SimpleListActivity;
+import com.siteduzero.android.fragments.settings.UsingSettingsActivity;
 
 import java.util.ArrayList;
 import java.util.List;

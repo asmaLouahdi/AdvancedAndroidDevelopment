@@ -2,7 +2,7 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <header
-        android:fragment="com.siteduzero.android.settings.SettingsFragment"
+        android:fragment="com.siteduzero.android.fragments.settings.SettingsFragment"
         android:icon="@android:drawable/ic_menu_edit"
         android:summary="@string/summary_header_edit"
         android:title="@string/title_header_edit" >
@@ -11,7 +11,7 @@
             android:value="header_edit" />
     </header>
     <header
-        android:fragment="com.siteduzero.android.settings.SettingsFragment"
+        android:fragment="com.siteduzero.android.fragments.settings.SettingsFragment"
         android:icon="@android:drawable/ic_menu_agenda"
         android:summary="@string/summary_header_agenda"
         android:title="@string/title_header_agenda" >

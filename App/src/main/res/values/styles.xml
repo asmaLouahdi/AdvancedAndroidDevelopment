@@ -1,5 +1,33 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <style name="AppTheme" parent="android:Theme.Light"/>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Base.Theme.Randoomz.NoActionBar">
+  </style>
+
+  <!-- Theme of the fragment part -->
+  <style name="AppTheme.Fragments" parent="Base.Theme.Randoomz">
+  </style>
+
+  <style name="Base.Theme.Randoomz" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/dark_primary</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="android:textColorPrimary">@color/primary_text</item>
+    <item name="android:windowBackground">@color/window_background</item>
+    <item name="actionMenuTextColor">@color/primary_text</item>
+  </style>
+
+  <style name="Base.Theme.Randoomz.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/dark_primary</item>
+    <item name="colorAccent">@color/accent</item>
+    <item name="android:textColorPrimary">@color/primary_text</item>
+    <item name="android:windowBackground">@color/window_background</item>
+    <item name="actionMenuTextColor">@color/primary_text</item>
+  </style>
+
+  <style name="Base.Theme.Randoomz.Overlay" parent="ThemeOverlay.AppCompat.Light">
+    <item name="android:textColorPrimary">@color/primary_text</item>
+  </style>
 
 </resources>

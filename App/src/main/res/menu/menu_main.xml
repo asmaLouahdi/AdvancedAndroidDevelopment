@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".ui.MainActivity">
 
   <item
     android:id="@+id/menu_zds"
     android:icon="@drawable/ic_action_zds"
     android:title="@string/menu_zds"
-    android:showAsAction="ifRoom"/>
+    app:showAsAction="ifRoom"/>
   <item
     android:id="@+id/menu_github"
     android:icon="@drawable/ic_action_github"
     android:title="@string/menu_github"
-    android:showAsAction="ifRoom"/>
+    app:showAsAction="ifRoom"/>
 
 </menu>
