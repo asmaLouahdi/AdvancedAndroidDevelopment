@@ -8,16 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.siteduzero.android.R;
-import org.randoomz.demo.utils.ui.ListFragment;
-import org.randoomz.demo.utils.ui.OnItemListener;
 
-public class MainFragment extends ListFragment<MainAdapter, OnMainNavigationListener> implements OnItemListener<MainController.Item> {
+import org.randoomz.demo.utils.ui.ListFragment;
+
+public class MainFragment extends ListFragment<MainController.Item, MainAdapter, OnMainNavigationListener> {
   public static Fragment newInstance() {
     return new MainFragment();
   }
 
   @Override protected MainAdapter initializeAdapter() {
-    return new MainAdapter(this);
+    return new MainAdapter();
   }
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

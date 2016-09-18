@@ -1,7 +1,6 @@
 package org.randoomz.demo.utils.ui;
 
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,21 +8,17 @@ import java.util.List;
 /**
  * Created by Gerard on 14/09/16.
  */
-public abstract class AbstractAdapter<T extends AbstractAdapter.ViewHolder, I> extends RecyclerView.Adapter<T> {
-  private final OnItemListener<I> listener;
+public abstract class AbstractAdapter<T extends RecyclerView.ViewHolder, I> extends RecyclerView.Adapter<T> {
   private final List<I> items = new ArrayList<>();
 
-  public AbstractAdapter() {
-    this(null);
-  }
-
-  public AbstractAdapter(OnItemListener<I> listener) {
-    this.listener = listener;
+  public List<I> items() {
+    return items;
   }
 
   public void update(List<I> items) {
     this.items.clear();
     this.items.addAll(items);
+    notifyDataSetChanged();
   }
 
   @Override public int getItemCount() {
@@ -35,18 +30,4 @@ public abstract class AbstractAdapter<T extends AbstractAdapter.ViewHolder, I> e
   }
 
   public abstract void onBindViewHolder(T holder, I item, int position);
-
-  public abstract class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-    public ViewHolder(View itemView) {
-      super(itemView);
-      itemView.setOnClickListener(this);
-    }
-
-    @Override public void onClick(View v) {
-      if (listener != null) {
-        final int position = getLayoutPosition();
-        listener.onClick(items.get(position), position);
-      }
-    }
-  }
 }

@@ -11,18 +11,17 @@ import android.view.View;
 import com.siteduzero.android.R;
 import org.randoomz.demo.samples.OnMainNavigationListener;
 import org.randoomz.demo.utils.ui.ListFragment;
-import org.randoomz.demo.utils.ui.OnItemListener;
 
 /**
  * Created by Gerard on 14/09/16.
  */
-public class SamplesFragment extends ListFragment<SamplesFragmentAdapter, OnMainNavigationListener> implements OnItemListener<SamplesController.Item> {
+public class SamplesFragment extends ListFragment<SamplesController.Item, SamplesFragmentAdapter, OnMainNavigationListener> {
   public static Fragment newInstance() {
     return new SamplesFragment();
   }
 
   @Override protected SamplesFragmentAdapter initializeAdapter() {
-    return new SamplesFragmentAdapter(this);
+    return new SamplesFragmentAdapter();
   }
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
