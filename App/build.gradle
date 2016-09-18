@@ -5,7 +5,7 @@ android {
   buildToolsVersion '24.0.2'
 
   defaultConfig {
-    applicationId 'org.randoomz.tutorials.android'
+    applicationId 'org.randoomz.demo'
     minSdkVersion 11
     targetSdkVersion 24
     versionCode 1

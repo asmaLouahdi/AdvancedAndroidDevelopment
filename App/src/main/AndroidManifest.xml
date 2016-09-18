@@ -10,7 +10,7 @@
 
     <!-- Launcher -->
     <activity
-      android:name="com.siteduzero.android.samples.SamplesActivity"
+      android:name="org.randoomz.demo.samples.MainActivity"
       android:label="@string/app_name">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -20,35 +20,35 @@
     </activity>
     <!-- Part 1 -->
     <activity
-      android:name=".fragments.fragments.fixe.FixeActivity"
+      android:name="org.randoomz.demo.fragments.fragments.fixe.FixeActivity"
       android:label="@string/title_fragment_fixe"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.fragments.dynamic.DynamicActivity"
+      android:name="org.randoomz.demo.fragments.fragments.dynamic.DynamicActivity"
       android:label="@string/title_fragment_dynamic"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.lists.simple.SimpleListActivity"
+      android:name="org.randoomz.demo.fragments.lists.simple.SimpleListActivity"
       android:label="@string/title_listfragment_simple"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.lists.custom.CustomListActivity"
+      android:name="org.randoomz.demo.fragments.lists.custom.CustomListActivity"
       android:label="@string/title_listfragment_custom"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.lists.dynamic.DynamicListActivity"
+      android:name="org.randoomz.demo.fragments.lists.dynamic.DynamicListActivity"
       android:label="@string/title_listfragment_dynamic"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.dynamicui.DynamicUIActivity"
+      android:name="org.randoomz.demo.fragments.dynamicui.DynamicUIActivity"
       android:label="@string/title_dynamic_ui"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.settings.UsingSettingsActivity"
+      android:name="org.randoomz.demo.fragments.settings.UsingSettingsActivity"
       android:label="@string/title_fragment_settings"
       android:theme="@style/AppTheme.Fragments"/>
     <activity
-      android:name=".fragments.settings.SettingsActivity"
+      android:name="org.randoomz.demo.fragments.settings.SettingsActivity"
       android:label="@string/title_fragment_settings"
       android:theme="@style/AppTheme.Fragments">
 
@@ -60,7 +60,7 @@
       </intent-filter>
     </activity>
     <activity
-      android:name=".fragments.dialog.DialogActivity"
+      android:name="org.randoomz.demo.fragments.dialog.DialogActivity"
       android:label="@string/title_fragment_dialog"
       android:theme="@style/AppTheme.Fragments"/>
   </application>

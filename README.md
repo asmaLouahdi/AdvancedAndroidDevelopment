@@ -1,4 +1,4 @@
-# Go further in Android development
+# Randoomz Demo
 
 A sample Android app which is used by the french tutorial "[Aller plus loin dans le développement Android](https://zestedesavoir.com/tutoriels/609/aller-plus-loin-dans-le-developpement-android-1/)"
 hosted on Zeste de Savoir.

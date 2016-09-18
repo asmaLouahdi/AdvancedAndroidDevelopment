@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.siteduzero.android.fragments.fragments.fixe.FixeFragment"
+        android:name="org.randoomz.demo.fragments.fragments.fixe.FixeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.siteduzero.android.fragments.fragments.fixe.FixeFragment"
+        android:name="org.randoomz.demo.fragments.fragments.fixe.FixeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
