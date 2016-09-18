@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/GerardPaligot/AdvancedAndroidDevelopment.svg?branch=dev)](https://travis-ci.org/GerardPaligot/AdvancedAndroidDevelopment)
+
 # Randoomz Demo
 
 A sample Android app which is used by the french tutorial "[Aller plus loin dans le développement Android](https://zestedesavoir.com/tutoriels/609/aller-plus-loin-dans-le-developpement-android-1/)"

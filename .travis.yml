@@ -1,0 +1,17 @@
+language: android
+
+jdk:
+ - oraclejdk8
+
+android:
+  components:
+    - platform-tools
+    - tools
+    - android-24
+    - build-tools-24.0.2
+    - extra-android-m2repository
+
+notifications:
+  email: false
+
+sudo: false
