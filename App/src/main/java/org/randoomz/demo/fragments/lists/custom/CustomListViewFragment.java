@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 import java.util.ArrayList;
 import java.util.List;

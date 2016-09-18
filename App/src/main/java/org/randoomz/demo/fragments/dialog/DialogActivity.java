@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 import org.randoomz.demo.fragments.dialog.DateDialog.DateSelected;
 import org.randoomz.demo.fragments.dialog.TimeDialog.TimeSelected;
 

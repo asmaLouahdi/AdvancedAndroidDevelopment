@@ -9,7 +9,7 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class SettingsFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {

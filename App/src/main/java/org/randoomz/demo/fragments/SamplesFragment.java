@@ -8,7 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 import org.randoomz.demo.samples.OnMainNavigationListener;
 import org.randoomz.demo.utils.ui.ListFragment;
 

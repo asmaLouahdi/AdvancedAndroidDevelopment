@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 import org.randoomz.demo.utils.ui.AbstractAdapter;
 

@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class CountryListFragment extends ListFragment implements OnItemClickListener {
 	private OnCountrySelectedListener mListener = null;

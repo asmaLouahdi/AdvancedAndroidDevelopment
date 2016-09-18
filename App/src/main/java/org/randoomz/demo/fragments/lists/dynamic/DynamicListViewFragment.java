@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class DynamicListViewFragment extends ListFragment {
     public static final String TAG = "DynamicListViewFragment";

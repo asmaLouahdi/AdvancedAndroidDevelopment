@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class CountryDetailsFragment extends Fragment {
     private static final String ARG_POSITION = "POSITION";

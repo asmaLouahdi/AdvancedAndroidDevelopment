@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class Dynamic2Fragment extends Fragment {
     public static final String TAG = "Dynamic2Fragment";

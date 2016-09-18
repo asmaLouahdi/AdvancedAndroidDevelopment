@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class SimpleListViewFragment extends ListFragment {
 

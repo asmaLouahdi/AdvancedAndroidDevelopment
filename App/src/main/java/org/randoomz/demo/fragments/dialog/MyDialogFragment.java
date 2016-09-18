@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class MyDialogFragment extends DialogFragment {
 	private static final String KEY_TITLE = "title";

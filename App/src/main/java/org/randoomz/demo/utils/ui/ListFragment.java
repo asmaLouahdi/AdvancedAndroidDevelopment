@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 /**
  * Created by Gerard on 14/09/16.

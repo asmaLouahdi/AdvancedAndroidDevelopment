@@ -8,7 +8,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class ListAlertDialog extends DialogFragment {
 	private static final String KEY_TITLE = "title";

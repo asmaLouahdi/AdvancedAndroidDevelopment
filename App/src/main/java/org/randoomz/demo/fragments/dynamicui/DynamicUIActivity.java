@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 import org.randoomz.demo.fragments.dynamicui.CountryListFragment.OnCountrySelectedListener;
 
 public class DynamicUIActivity extends AppCompatActivity implements OnCountrySelectedListener {

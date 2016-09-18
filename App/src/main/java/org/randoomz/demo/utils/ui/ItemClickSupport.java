@@ -3,7 +3,7 @@ package org.randoomz.demo.utils.ui;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 /*
   Source: http://www.littlerobots.nl/blog/Handle-Android-RecyclerView-Clicks/

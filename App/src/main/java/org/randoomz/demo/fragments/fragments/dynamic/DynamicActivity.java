@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class DynamicActivity extends AppCompatActivity {
     private static final String KEY_FRAGMENT = "fragment_save";

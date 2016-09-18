@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class UsingSettingsActivity extends AppCompatActivity {
   private TextView mTextViewPref1;

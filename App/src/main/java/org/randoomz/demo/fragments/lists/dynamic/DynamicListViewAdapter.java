@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 import java.util.ArrayList;
 import java.util.List;

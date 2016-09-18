@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 import org.randoomz.demo.fragments.SamplesFragment;
 
 public class MainActivity extends AppCompatActivity implements OnMainNavigationListener {

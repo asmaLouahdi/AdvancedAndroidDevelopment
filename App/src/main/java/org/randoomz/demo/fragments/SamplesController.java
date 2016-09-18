@@ -2,7 +2,7 @@ package org.randoomz.demo.fragments;
 
 import android.app.Activity;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 import org.randoomz.demo.fragments.dialog.DialogActivity;
 import org.randoomz.demo.fragments.dynamicui.DynamicUIActivity;
 import org.randoomz.demo.fragments.fragments.dynamic.DynamicActivity;

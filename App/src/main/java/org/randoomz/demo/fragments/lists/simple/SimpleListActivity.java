@@ -3,7 +3,7 @@ package org.randoomz.demo.fragments.lists.simple;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 public class SimpleListActivity extends AppCompatActivity {
 	@Override

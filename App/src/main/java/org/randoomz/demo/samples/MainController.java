@@ -2,7 +2,7 @@ package org.randoomz.demo.samples;
 
 import android.support.v4.app.Fragment;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 import org.randoomz.demo.fragments.SamplesFragment;
 
 import java.util.ArrayList;

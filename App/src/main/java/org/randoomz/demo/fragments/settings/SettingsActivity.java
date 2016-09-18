@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.siteduzero.android.R;
+import org.randoomz.demo.R;
 
 import java.util.List;
 
