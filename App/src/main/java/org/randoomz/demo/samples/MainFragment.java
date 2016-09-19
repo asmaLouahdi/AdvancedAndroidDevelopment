@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import org.randoomz.demo.R;
-
 import org.randoomz.demo.utils.ui.ListFragment;
 
 public class MainFragment extends ListFragment<MainController.Item, MainAdapter, OnMainNavigationListener> {
@@ -27,10 +26,14 @@ public class MainFragment extends ListFragment<MainController.Item, MainAdapter,
       ab.setDisplayHomeAsUpEnabled(false);
       ab.setTitle(getString(R.string.app_name));
     }
-    getAdapter().update(MainController.getInstance().getItems());
+    getAdapter().update(MainController.get().items);
   }
 
   @Override public void onClick(MainController.Item item, int position) {
-    getNavigationListener().goToFragmentsList();
+    if (OnMainNavigationListener.FRAGMENTS.equals(item.fragmentToStart)) {
+      getNavigationListener().goToFragmentsList();
+    } else {
+      getNavigationListener().goToDesignsList();
+    }
   }
 }

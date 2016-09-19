@@ -1,15 +1,14 @@
 package org.randoomz.demo.samples;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import org.randoomz.demo.R;
-import org.randoomz.demo.fragments.SamplesFragment;
+import org.randoomz.demo.design.DesignController;
+import org.randoomz.demo.fragments.FragmentsController;
+import org.randoomz.demo.samples.common.SampleListFragment;
 
 public class MainActivity extends AppCompatActivity implements OnMainNavigationListener {
   @Override
@@ -27,15 +26,16 @@ public class MainActivity extends AppCompatActivity implements OnMainNavigationL
 
   @Override public void goToFragmentsList() {
     getSupportFragmentManager().beginTransaction()
-        .replace(R.id.content, SamplesFragment.newInstance())
+        .replace(R.id.content, SampleListFragment.newInstance(R.string.title_fragment, R.string.menu_fragment_github, R.string.menu_fragment_zds, FragmentsController.get().items))
         .addToBackStack(null)
         .commit();
   }
 
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(R.menu.menu_main, menu);
-    return true;
+  @Override public void goToDesignsList() {
+    getSupportFragmentManager().beginTransaction()
+        .replace(R.id.content, SampleListFragment.newInstance(R.string.title_design, R.string.menu_design_github, R.string.menu_design_zds, DesignController.get().items))
+        .addToBackStack(null)
+        .commit();
   }
 
   @Override
@@ -44,27 +44,7 @@ public class MainActivity extends AppCompatActivity implements OnMainNavigationL
       case android.R.id.home:
         getSupportFragmentManager().popBackStack();
         return true;
-      case R.id.menu_github:
-        goToSourceCodes();
-        return true;
-      case R.id.menu_zds:
-        goToZdS();
-        return true;
     }
     return super.onOptionsItemSelected(item);
-  }
-
-  private void goToZdS() {
-    Intent i = new Intent(
-        Intent.ACTION_VIEW,
-        Uri.parse("https://zestedesavoir.com/tutoriels/609/aller-plus-loin-dans-le-developpement-android-1/"));
-    startActivity(i);
-  }
-
-  private void goToSourceCodes() {
-    Intent i = new Intent(
-        Intent.ACTION_VIEW,
-        Uri.parse("https://github.com/GerardPaligot/AdvancedAndroidDevelopment"));
-    startActivity(i);
   }
 }

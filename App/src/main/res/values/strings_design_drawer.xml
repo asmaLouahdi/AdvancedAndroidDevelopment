@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="drawer_header_text">Drawer Header</string>
+
+  <string name="menu_add">Add item</string>
+  <string name="menu_delete">Delete item</string>
+  <string name="menu_dynamic">Dynamic items</string>
+
+  <string name="menu_sub_item">Sub Item %d</string>
+
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
+</resources>

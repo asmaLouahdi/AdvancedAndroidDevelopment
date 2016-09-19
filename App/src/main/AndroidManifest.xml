@@ -19,7 +19,7 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <!-- Part 1 -->
+    <!-- Fragments -->
     <activity
       android:name="org.randoomz.demo.fragments.fragments.fixe.FixeActivity"
       android:label="@string/title_fragment_fixe"
@@ -64,6 +64,11 @@
       android:name="org.randoomz.demo.fragments.dialog.DialogActivity"
       android:label="@string/title_fragment_dialog"
       android:theme="@style/AppTheme.Fragments"/>
+
+    <!-- Material Design -->
+    <activity
+      android:name="org.randoomz.demo.design.drawer.DrawerActivity"
+      android:label="@string/title_design_drawer"/>
   </application>
 
 </manifest>
