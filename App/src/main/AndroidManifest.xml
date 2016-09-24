@@ -83,6 +83,10 @@
     <activity
       android:name="org.randoomz.demo.design.toolbar.ToolbarExtendsActivity"
       android:label="@string/title_design_toolbar_extends"/>
+    <activity
+      android:name="org.randoomz.demo.design.toolbar.ToolbarTabsActivity"
+      android:label="@string/title_design_toolbar_tabs"
+      android:theme="@style/AppTheme.Fragments"/>
   </application>
 
 </manifest>

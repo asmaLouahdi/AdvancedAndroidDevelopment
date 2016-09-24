@@ -9,10 +9,8 @@ import android.view.ViewGroup;
 import org.randoomz.demo.R;
 
 public class FixeFragment extends Fragment {
-    @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_fixe, container, false);
-    }
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    return inflater.inflate(R.layout.fragment_fixe, container, false);
+  }
 }

@@ -23,11 +23,27 @@
     <item name="colorAccent">@color/accent</item>
     <item name="android:textColorPrimary">@color/primary_text</item>
     <item name="android:windowBackground">@color/window_background</item>
-    <item name="actionMenuTextColor">@color/primary_text</item>
   </style>
 
   <style name="Base.Theme.Randoomz.Overlay" parent="ThemeOverlay.AppCompat.Light">
     <item name="android:textColorPrimary">@color/primary_text</item>
+  </style>
+
+  <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
+    <item name="tabMaxWidth">@dimen/tab_max_width</item>
+    <item name="tabIndicatorColor">?attr/colorAccent</item>
+    <item name="tabIndicatorHeight">4dp</item>
+    <item name="tabPaddingStart">12dp</item>
+    <item name="tabPaddingEnd">12dp</item>
+    <item name="tabBackground">?attr/selectableItemBackground</item>
+    <item name="tabTextAppearance">@style/AppTheme.Tab</item>
+    <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+  </style>
+
+  <style name="AppTheme.Tab" parent="TextAppearance.Design.Tab">
+    <item name="android:textSize">14sp</item>
+    <item name="android:textColor">?android:textColorSecondary</item>
+    <item name="textAllCaps">true</item>
   </style>
 
 </resources>

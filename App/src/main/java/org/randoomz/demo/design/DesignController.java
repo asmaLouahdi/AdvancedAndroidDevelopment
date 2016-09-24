@@ -4,6 +4,7 @@ import org.randoomz.demo.R;
 import org.randoomz.demo.design.drawer.DrawerActivity;
 import org.randoomz.demo.design.toolbar.ToolbarExtendsActivity;
 import org.randoomz.demo.design.toolbar.ToolbarSearchActivity;
+import org.randoomz.demo.design.toolbar.ToolbarTabsActivity;
 import org.randoomz.demo.samples.common.Item;
 
 import java.util.ArrayList;
@@ -22,5 +23,6 @@ public class DesignController {
     items.add(new Item(R.string.title_design_drawer, DrawerActivity.class));
     items.add(new Item(R.string.title_design_toolbar_search, ToolbarSearchActivity.class));
     items.add(new Item(R.string.title_design_toolbar_extends, ToolbarExtendsActivity.class));
+    items.add(new Item(R.string.title_design_toolbar_tabs, ToolbarTabsActivity.class));
   }
 }
