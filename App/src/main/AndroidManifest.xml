@@ -80,6 +80,9 @@
         android:name="android.app.searchable"
         android:resource="@xml/searchable"/>
     </activity>
+    <activity
+      android:name="org.randoomz.demo.design.toolbar.ToolbarExtendsActivity"
+      android:label="@string/title_design_toolbar_extends"/>
   </application>
 
 </manifest>

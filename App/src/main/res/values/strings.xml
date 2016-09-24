@@ -19,6 +19,7 @@
   <string name="title_design">Publish an app Material Design</string>
   <string name="title_design_drawer">Navigation Drawer</string>
   <string name="title_design_toolbar_search">Toolbar Search</string>
+  <string name="title_design_toolbar_extends">Toolbar Extended</string>
   <string name="menu_design_zds">https://zestedesavoir.com/contenus/839/developper-et-publier-une-app-android-material-design/</string>
   <string name="menu_design_github">https://github.com/GerardPaligot/AdvancedAndroidDevelopment/tree/2.x/App/src/main/java/org/randoomz/demo/design</string>
 

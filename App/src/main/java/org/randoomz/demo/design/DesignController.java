@@ -2,6 +2,7 @@ package org.randoomz.demo.design;
 
 import org.randoomz.demo.R;
 import org.randoomz.demo.design.drawer.DrawerActivity;
+import org.randoomz.demo.design.toolbar.ToolbarExtendsActivity;
 import org.randoomz.demo.design.toolbar.ToolbarSearchActivity;
 import org.randoomz.demo.samples.common.Item;
 
@@ -20,5 +21,6 @@ public class DesignController {
   private DesignController() {
     items.add(new Item(R.string.title_design_drawer, DrawerActivity.class));
     items.add(new Item(R.string.title_design_toolbar_search, ToolbarSearchActivity.class));
+    items.add(new Item(R.string.title_design_toolbar_extends, ToolbarExtendsActivity.class));
   }
 }
