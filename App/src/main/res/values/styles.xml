@@ -25,22 +25,38 @@
     <item name="android:windowBackground">@color/window_background</item>
   </style>
 
-  <style name="Base.Theme.Randoomz.Overlay" parent="ThemeOverlay.AppCompat.Light">
-    <item name="android:textColorPrimary">@color/primary_text</item>
+  <style name="ThemeOverlay.Randoomz.Toolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+    <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
+    <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+    <item name="actionMenuTextColor">@android:color/holo_green_light</item>
+    <!-- Tints the input fields like checkboxes and text fields -->
+    <item name="colorAccent">@android:color/holo_orange_dark</item>
+    <!-- Applies to views in their normal state (i.e icon with 3 dots to open sub menu). -->
+    <item name="colorControlNormal">@android:color/holo_purple</item>
+    <!-- Applies to views in their activated state (i.e checked or switches) -->
+    <item name="colorControlActivated">@android:color/holo_red_dark</item>
+    <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+    <item name="colorControlHighlight">@android:color/holo_red_dark</item>
   </style>
 
-  <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
+  <style name="TextAppearance.Randoomz.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:textSize">21sp</item>
+    <item name="android:textStyle">italic</item>
+  </style>
+
+  <style name="Widget.Randoomz.TabLayout" parent="Widget.Design.TabLayout">
     <item name="tabMaxWidth">@dimen/tab_max_width</item>
     <item name="tabIndicatorColor">?attr/colorAccent</item>
     <item name="tabIndicatorHeight">4dp</item>
     <item name="tabPaddingStart">12dp</item>
     <item name="tabPaddingEnd">12dp</item>
     <item name="tabBackground">?attr/selectableItemBackground</item>
-    <item name="tabTextAppearance">@style/AppTheme.Tab</item>
+    <item name="tabTextAppearance">@style/TextAppearance.Randoomz.Tab</item>
     <item name="tabSelectedTextColor">?android:textColorPrimary</item>
   </style>
 
-  <style name="AppTheme.Tab" parent="TextAppearance.Design.Tab">
+  <style name="TextAppearance.Randoomz.Tab" parent="TextAppearance.Design.Tab">
     <item name="android:textSize">14sp</item>
     <item name="android:textColor">?android:textColorSecondary</item>
     <item name="textAllCaps">true</item>

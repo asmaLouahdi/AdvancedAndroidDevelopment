@@ -18,6 +18,7 @@
   <!-- Design -->
   <string name="title_design">Publish an app Material Design</string>
   <string name="title_design_drawer">Navigation Drawer</string>
+  <string name="title_design_toolbar">Toolbar</string>
   <string name="title_design_toolbar_search">Toolbar Search</string>
   <string name="title_design_toolbar_extends">Toolbar Extended</string>
   <string name="title_design_toolbar_tabs">Toolbar Tabs</string>

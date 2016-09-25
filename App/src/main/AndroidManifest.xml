@@ -70,6 +70,9 @@
       android:name="org.randoomz.demo.design.drawer.DrawerActivity"
       android:label="@string/title_design_drawer"/>
     <activity
+      android:name="org.randoomz.demo.design.toolbar.ToolbarActivity"
+      android:label="@string/title_design_toolbar"/>
+    <activity
       android:name="org.randoomz.demo.design.toolbar.ToolbarSearchActivity"
       android:label="@string/title_design_toolbar_search">
       <intent-filter>
