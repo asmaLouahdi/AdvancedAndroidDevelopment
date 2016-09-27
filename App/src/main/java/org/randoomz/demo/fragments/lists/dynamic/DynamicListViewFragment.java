@@ -19,7 +19,7 @@ public class DynamicListViewFragment extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        DynamicListViewModel header = new DynamicListViewModel(R.drawable.ic_launcher, R.string.default_lorem);
+        DynamicListViewModel header = new DynamicListViewModel(R.mipmap.ic_launcher, R.string.default_lorem);
 
         DynamicListViewAdapter adapter = new DynamicListViewAdapter(getActivity());
         adapter.add(header);
