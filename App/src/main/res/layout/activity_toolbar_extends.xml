@@ -9,31 +9,33 @@
 
   <android.support.design.widget.AppBarLayout
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     <android.support.design.widget.CollapsingToolbarLayout
       android:id="@+id/collapsing_toolbar"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
+      app:contentScrim="?attr/colorPrimary"
       app:expandedTitleMarginEnd="64dp"
       app:expandedTitleMarginStart="30dp"
       app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+      <!-- Optional: Used to display a cover. -->
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          android:src="@drawable/android_landscape"
+          app:layout_collapseMode="parallax"/>
 
       <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:layout_scrollFlags="scroll|enterAlways"/>
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"/>
 
-      <!-- Optional: Used to display a cover. -->
-      <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/android_landscape"
-        app:layout_collapseMode="parallax"
-        app:layout_scrollFlags="scroll|enterAlways"/>
     </android.support.design.widget.CollapsingToolbarLayout>
   </android.support.design.widget.AppBarLayout>
 
